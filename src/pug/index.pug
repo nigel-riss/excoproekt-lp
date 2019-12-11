@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html(lang="ru")
+html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -7,222 +7,130 @@ html(lang="ru")
 
         link(rel="stylesheet", href="style.css")
 
-        title Willmade Barbershop
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=c74fa3df-581b-427a-9ae6-f565f4548493&lang=ru_RU" type="text/javascript">
+        </script>
+
+        title «ЭКСКО»
 
     body
-        //- .grid
         header.header.header--main
-            include ./modules/_header-top.pug
+            .header__wrapper
+                include ./modules/_header-top.pug
 
-            .header__city-info
-                p.header__work-time Режим Работы <span>с 10:00 до 21:00</span>
-
-                .header__city-selector
-                    a.city-selector(href="#")
-                        p.city-selector__your-city Ваш город
-                        p.city-selector__current-city Калининград
-
-
-            .header__caption
-                h1.header__title Willmade Barbershop
-                p.header__description Неповторимая классика для&nbsp;настоящих ценителей
+                .header__caption.header__caption--main
+                    h1.header__title <span>Экспертиза</span> <br><span>Оценка</span> <br><span>Классификация гостиниц</span> <br><span>Негосударственная экспертиза проектной документации</span> <br><span>Сертификация</span>
+                    //- h1.header__title Услуги экспертизы, оценки и&nbsp;cертификации в&nbsp;Калининграде
 
         main
-            section.section.section--dark
-                .section__content
-                    h2.title-2 <em>Willmade</em> О Барбершопе
-                    p.section-text Персональные данные при посещении сайта передаются пользователем добровольно, к ним могут относиться: имя, фамилия, отчество, номера телефонов, адреса электронной почты, адреса для доставки товаров или оказания услуг, реквизиты компании, которую представляет пользователь, должность в компании, которую представляет пользователь, аккаунты в социальных сетях; поля форм могут запрашивать и иные данные.
-                    p.section-text Эти данные собираются в целях оказания услуг или продажи товаров, связи с пользователем или иной активности пользователя на сайте, а также, чтобы отправлять пользователям информацию, которую они согласились получать.
-                    p.section-text Мы не проверяем достоверность оставляемых данных, однако не гарантируем качественного исполнения заказов или обратной связи с нами при некорректных данных.
-                    p.section-text Данные собираются имеющимися на сайте формами для заполнения (например, регистрации, оформления заказа, подписки, оставления отзыва, обратной связи и иными).
+            section.section.section--fix-h#about
+                .section__wrapper
+                    header.section__header
+                        p.section__subtitle 01 — О компании
+                        h2.section__title Независимая экспертная организация
 
-                    article.feature
-                        .feature__icon: img(src="./img/icons/vip.svg", alt="")
-                        h3.feature__title Сервис
-                        p.feature__description Каждый наш сотрудник проходит специализированное обучение, а регламенты позволяют запоминать предпочтения клиентов
-                    article.feature
-                        .feature__icon: img(src="./img/icons/scrab.svg", alt="")
-                        h3.feature__title Комфорт
-                        p.feature__description Была продумана абсолютно каждая деталь, для создания максимально комфортных условий для наших гостей
-                    article.feature
-                        .feature__icon: img(src="./img/icons/coloring.svg", alt="")
-                        h3.feature__title Эргономика
-                        p.feature__description Для нас это неотъемлемая часть сервиса. Грамотная эргономика создаёт дополнительный комфорт для гостя
+                    .section__content
+                        p.section__paragraph <strong>ЭКСКО</strong> — независимая экспертная организация, член Калининградской торгово-промышленной палаты, осуществляет деятельность с&nbsp;2003 года. Экспертные работы проводятся по&nbsp;заявкам российских, иностранных юридических и&nbsp;физических лиц, как&nbsp;на&nbsp;территории Российской Федерации, так&nbsp;и&nbsp;за&nbsp;рубежом.
 
-                    a.ghost-button(href="about.html") Узнать больше
+                        p.section__paragraph <strong>Независимость, объективность, опыт и&nbsp;профессионализм экспертов</strong> помогут Вам убедиться в&nbsp;качестве и&nbsp;соответствии объектов экспертизы (товаров, услуг, проектной документации, процессов и др.) и&nbsp;определить стоимость ваших активов.
 
-            section.section
-                header.section__header
-                    h2.section__title Адреса <br>и&nbsp;контакты
-                    p.section__subtitle Барбершопов
-                .section__content
-                    article.branch-card.branch-card--open
-                        .branch-card__back: img(src="./img/bgs/header-bg.jpg", alt="")
-                        header.branch-card__header
-                            h3.branch-card__address ул. Генерала Толстикова, 2А
-                            .branch-card__landmarks
-                                a.branch-card__landmark(href="#") м. Новоскворецкая
-                                a.branch-card__landmark(href="#") ТРЦ «Московский»
-                            a.branch-card__phone(href="tel:+79114556789") +7 911 455-67-89
-                            .branch-card__close-card: img(src="./img/icons/close.svg", alt="")
-                            .branch-card__open-spoiler.branch-card__open-spoiler--opened: img(src="./img/icons/down.svg", alt="")
-                        .branch-card__spoiler
-                            .branch-card__features-n-rating
-                                .branch-card__features
-                                    .service-icon
-                                        h4.service-icon__title Бесплатная парковка
-                                        img.service-icon__image(src="./img/icons/parking.svg", alt="")
-                                    .service-icon
-                                        h4.service-icon__title Татуировка
-                                        img.service-icon__image(src="./img/icons/tattoo.svg", alt="")
-                                    .service-icon
-                                        h4.service-icon__title VIP Кресло
-                                        img.service-icon__image(src="./img/icons/vip.svg", alt="")
-                                .branch-card__rating 4,7
-                            footer.branch-card__footer
-                                .branch-card__social
-                                    a.branch-card__network(href="#") VK <img src="./img/icons/vk.svg" />
-                                    a.branch-card__network(href="#") FB <img src="./img/icons/facebook.svg" />
-                                    a.branch-card__network(href="#") IN <img src="./img/icons/instagram.svg" />
-                                a.branch-card__book(href="#") Записаться
+            section.section.section--fix-h.section--grey#services
+                .section__wrapper
+                    header.section__header
+                        p.section__subtitle 02 — Услуги
+                        h2.section__title Наши <em>услуги</em>
+                        p.section__text как&nbsp;эффективный инструмент бизнеса —&nbsp;помогают предпринимателям успешно и&nbsp;оперативно решать задачи, способствуют повышению результативности их&nbsp;деятельности и&nbsp;быть на&nbsp;шаг впереди конкурентов.
 
-                    article.branch-card
-                        .branch-card__back: img(src="./img/bgs/header-bg.jpg", alt="")
-                        header.branch-card__header
-                            h3.branch-card__address ул. Ново-скворецкая, 125
-                            .branch-card__landmarks
-                                a.branch-card__landmark(href="#") ТЦ «Васильевский»
-                            a.branch-card__phone(href="tel:+79114556789") +7 911 455-67-89
-                            .branch-card__close-card: img(src="./img/icons/close.svg", alt="")
-                            .branch-card__open-spoiler: img(src="./img/icons/down.svg", alt="")
-                        .branch-card__spoiler
-                            .branch-card__features-n-rating
-                                .branch-card__features
-                                    .service-icon
-                                        h4.service-icon__title Бесплатная парковка
-                                        img.service-icon__image(src="./img/icons/parking.svg", alt="")
-                                    .service-icon
-                                        h4.service-icon__title Маникюр
-                                        img.service-icon__image(src="./img/icons/manicure.svg", alt="")
-                                .branch-card__rating 4,7
-                            footer.branch-card__footer
-                                .branch-card__social
-                                    a.branch-card__network(href="#") VK <img src="./img/icons/vk.svg" />
-                                    a.branch-card__network(href="#") IN <img src="./img/icons/instagram.svg" />
-                                a.branch-card__book(href="#") Записаться
+                        p.section__text Мы нацелены на улучшение условий обслуживания и&nbsp;ускорение процессов оказания услуг с&nbsp;минимальными затратами для&nbsp;заявителей.
+
+                        p.section__text В основе высокого качества услуг организации —&nbsp;опыт (на&nbsp;рынке экспертизы с&nbsp;2003 года), штат квалифицированных экспертов, деловые связи с&nbsp;экспертными организациями страны и&nbsp;партнерами зарубежных странах.
+
+                    .section__content
+                        article.spoiler.spoiler--open
+                            header.spoiler__header
+                                .spoiler__icon: img(src="./img/icons/search.svg", alt="")
+                                h3.spoiler__title Экспертиза
+                                //- .spoiler__button
+                            .spoiler__content
+                                p.spoiler__text Равным образом сложившаяся структура организации в&nbsp;значительной степени обуславливает создание направлений прогрессивного развития. Повседневная практика показывает, что&nbsp;начало повседневной работы
+                                .spoiler__more
+                                    a.more-button(href="expertise.html") Подробнее
+
+                        article.spoiler.spoiler--open
+                            header.spoiler__header
+                                .spoiler__icon: img(src="./img/icons/calculator.svg", alt="")
+                                h3.spoiler__title Оценка
+                                //- .spoiler__button
+                            .spoiler__content
+                                p.spoiler__text Определение рыночной стоимости товара с&nbsp;учетом его фактического состояния и&nbsp;качества (на&nbsp;дату оценки) как&nbsp;наиболее вероятной цены, по&nbsp;которой данный объект оценки может быть отчужден на&nbsp;открытом рынке в&nbsp;условиях конкуренции.
+                                .spoiler__more
+                                    a.more-button(href="eval.html") Подробнее
+
+                        article.spoiler.spoiler--open
+                            header.spoiler__header
+                                .spoiler__icon: img(src="./img/icons/clipboard-list.svg", alt="")
+                                h3.spoiler__title Негосударственная экспертиза проектной документации
+                                //- .spoiler__button
+                            .spoiler__content
+                                p.spoiler__text Таким образом консультация с&nbsp;широким активом позволяет оценить значение соответствующий условий активизации.
+                                .spoiler__more
+                                    a.more-button(href="nongov.html") Подробнее
+
+                        article.spoiler.spoiler--open
+                            header.spoiler__header
+                                .spoiler__icon: img(src="./img/icons/half-star.svg", alt="")
+                                h3.spoiler__title Классификация гостиниц
+                                //- .spoiler__button
+                            .spoiler__content
+                                p.spoiler__text Товарищи! дальнейшее развитие различных форм деятельности играет важную роль в&nbsp;формировании систем массового участия. Не&nbsp;следует, однако забывать, что&nbsp;начало повседневной работы по&nbsp;формированию позиции требуют определения и&nbsp;уточнения новых предложений.
+                                .spoiler__more
+                                    a.more-button(href="hotels.html") Подробнее
+
+                        article.spoiler.spoiler--open
+                            header.spoiler__header
+                                .spoiler__icon: img(src="./img/icons/clipboard-check.svg", alt="")
+                                h3.spoiler__title Сертификация
+                                //- .spoiler__button
+                            .spoiler__content
+                                p.spoiler__text Экспертные работы проводятся по заявкам российских и&nbsp;иностранных юридических и&nbsp;физических лиц, как&nbsp;на&nbsp;территории региона, Российской Федерации, так и&nbsp;за&nbsp;рубежом.
+                                .spoiler__more
+                                    a.more-button(href="certification.html") Подробнее
 
 
-            section.section
-                header.section__header
-                    h2.section__title Прайс-лист на&nbsp;услуги
-                    p.section__subtitle Price List
-                    //- p.section__subtitle <strong>Prices</strong>
-                .section__content
-                    h3.inner-title Основные услуги
-                    .price-table
-                        .price-table__row.price-table__row--open
-                            .price-table__caption
-                                .price-table__name Стрижка мужская <small>подбор стиля, мытьё головы</small>
-                                .price-table__value 1&nbsp;200
-                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
-                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
-                        .price-table__row
-                            .price-table__caption
-                                .price-table__name Опасное бритьё лица
-                                .price-table__value 1&nbsp;100
-                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
-                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
-                        .price-table__row
-                            .price-table__caption
-                                .price-table__name Опасное бритьё головы
-                                .price-table__value 1&nbsp;200
-                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
-                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
-                        .price-table__row
-                            .price-table__caption
-                                .price-table__name Стрижка детская <small>с&nbsp;3 до&nbsp;11&nbsp;лет</small>
-                                .price-table__value 800
-                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
-                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
-                        .price-table__row
-                            .price-table__caption
-                                .price-table__name Стрижка под&nbsp;машинку
-                                .price-table__value 600
-                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
-                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
-                        .price-table__row
-                            .price-table__caption
-                                .price-table__name Оформление бороды /&nbsp;усов
-                                .price-table__value 800
-                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
-                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
-                        .price-table__row
-                            .price-table__caption
-                                .price-table__name Окантовка
-                                .price-table__value 400
-                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
-                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
-                        .price-table__row
-                            .price-table__caption
-                                .price-table__name Мытьё головы и&nbsp;укладка
-                                .price-table__value 500
-                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
-                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
-                        .price-table__row
-                            .price-table__caption
-                                .price-table__name Камуфляж головы
-                                .price-table__value 1&nbsp;200
-                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
-                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
-                        .price-table__row
-                            .price-table__caption
-                                .price-table__name Камуфляж бороды
-                                .price-table__value 800
-                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
-                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+            section.section.section--fix-h#clients
+                .section__wrapper
+                    header.section__header
+                        p.section__subtitle 03 — Клиенты
+                        h2.section__title Наши <em>клиенты</em>
+                        p.section__text Экспертные работы проводятся по&nbsp;заявкам российских и&nbsp;иностранных юридических и&nbsp;физических лиц, как&nbsp;на&nbsp;территории региона, Российской Федерации, так&nbsp;и&nbsp;за&nbsp;рубежом.
 
-                    h3.inner-title Комплексные услуги
-                    .price-table
-                        .price-table__row
-                            .price-table__caption
-                                .price-table__name Папа + Сын
-                                .price-table__value 1&nbsp;800
-                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
-                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
-                        .price-table__row
-                            .price-table__caption
-                                .price-table__name Мужская стрижка +&nbsp;Оформление бороды
-                                .price-table__value 1&nbsp;800
-                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
-                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+                    .section__content
+                        .clients
+                            article.client
+                                .client__logo: img(src="./img/clients/alians.png", alt="Винно-Коньячный завод Альянс-1892" title="Винно-Коньячный завод Альянс-1892")
+                                h3.client__title Винно-Коньячный завод Альянс-1892
 
+                            article.client
+                                .client__logo: img(src="./img/clients/arbitr.png", alt="Арбитражный суд Калининградской области" title="Арбитражный суд Калининградской области")
+                                h3.client__title Арбитражный суд Калининградской области
 
-            section.section.section--dark
-                header.section__header
-                    h2.section__title Наши <br>услуги
-                    p.section__subtitle Технологии
-                .section__content
-                    article.service-card
-                        .service-card__back: img(src="./img/bgs/services/service-1.jpg", alt="")
+                            article.client
+                                .client__logo: img(src="./img/clients/mushkino.png", alt="Сафари-парк Мушкино" title="Сафари-парк Мушкино")
+                                h3.client__title Сафари-парк Мушкино
 
-                        header.service-card__header
-                            h3.service-card__title Мужская стрижка
-                            p.service-card__number #01
+                            article.client
+                                .client__logo: img(src="./img/clients/mchs.png", alt="МЧС Российской Федерации" title="МЧС Российской Федерации")
+                                h3.client__title МЧС Российской Федерации
 
-                        .service-card__content
-                            p.service-card__text Элегантность — это не только лёгкость, и не только свобода от любых ограничений или неловкости. Она представляет собой исполненную вдохновения, изысканную отточенность каждой детали и лоск
-                            a.service-card__more(href="#") Узнать больше
+                            article.client
+                                .client__logo: img(src="./img/clients/kaliningrad.png", alt="Правительство города Калининграда" title="Правительство города Калининграда")
+                                h3.client__title Правительство города Калининграда
 
-            section.section
-                header.section__header
-                    h2.section__title Наши <br>услуги
-                    p.section__subtitle Технологии
+                            article.client
+                                .client__logo: img(src="./img/clients/avtotor.png", alt="Автотор" title="Автотор")
+                                h3.client__title Автотор
 
-                .section__content
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat qui, error iusto consectetur ut harum quod facilis veniam consequatur expedita amet, ipsa aspernatur saepe. Hic enim exercitationem omnis nisi quas?
-                    p Numquam sapiente voluptate modi quam exercitationem quibusdam et architecto consequuntur amet! Adipisci, corporis fugiat tempore natus odit corrupti recusandae quo dolorum quidem vel amet mollitia saepe, dicta incidunt et modi.
-                    p Deleniti nulla perferendis animi distinctio repudiandae non molestiae modi libero maxime soluta sunt, illum iusto. Magni minima tempore iure ipsam, nobis molestias quam earum vel adipisci deserunt blanditiis perferendis illum?
+            include ./modules/_contacts.pug
 
-        footer.footer
+        include ./modules/_footer.pug
 
         script(src="scripts.js")

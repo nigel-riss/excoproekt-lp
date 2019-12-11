@@ -1,61 +1,32 @@
 @charset 'utf-8';
 
-// Base
+// base
+@import './base/wordpress';
 @import './base/normalize';
 @import './base/vars';
 @import './base/mixins';
 @import './base/globals';
 
-// Fonts
+// fonts
 @import './fonts/fonts';
 
-// Modules
-@import './modules/wrapper';
-
-//    Sections
+// modules
 @import './modules/header';
-@import './modules/section';
-@import './modules/about-section';
-@import './modules/branches-section';
-@import './modules/features-section';
-@import './modules/masters-section';
-@import './modules/price-list-section';
-@import './modules/services-section';
-@import './modules/footer';
-
-
 @import './modules/menu-button';
 @import './modules/main-nav';
-@import './modules/city-info';
-@import './modules/city-selector';
-@import './modules/online-icon';
+@import './modules/section';
+@import './modules/spoiler';
+@import './modules/more-button';
+@import './modules/clients';
+@import './modules/client';
+@import './modules/docs-download';
 
-@import './modules/service-icon';
+@import './modules/contacts';
+@import './modules/ctc-form';
+@import './modules/footer';
+@import './modules/footer-nav';
 
-@import './modules/branch-card';
-@import './modules/inner-title';
-@import './modules/price-table';
-@import './modules/service-card';
-
-@import './modules/big-slider';
-@import './modules/big-slide';
-@import './modules/slider-nav';
-
-@import './modules/master';
-
-@import './modules/sidenote';
-@import './modules/title-2';
-@import './modules/title-3';
-@import './modules/section-text';
-@import './modules/feature';
-
-@import './modules/button';
-@import './modules/ghost-button';
-
-@import './modules/footer-menu';
-@import './modules/footer-2ry-menu';
-@import './modules/social';
-
-// Vendor and support
-@import './modules/grid';
-
+@import './modules/services';
+@import './modules/service';
+@import './modules/more-info';
+@import './modules/feedback';

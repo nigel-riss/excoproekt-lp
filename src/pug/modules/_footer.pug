@@ -1,36 +1,34 @@
 footer.footer
-    .footer__content
-        .footer__logo
-            img(src="./img/logo--white.svg", alt="белый логотип Willmade Barbershop")
-        nav.footer__menu
-            ul.footer-menu
-                li.footer-menu__item
-                    a.footer-menu__link(href="#") Главная
-                li.footer-menu__item
-                    a.footer-menu__link(href="#") Франшиза
-                li.footer-menu__item
-                    a.footer-menu__link(href="#") Филиалы
-                li.footer-menu__item
-                    a.footer-menu__link(href="#") О Барбершопе
-                li.footer-menu__item
-                    a.footer-menu__link(href="#") Новости
-                li.footer-menu__item
-                    a.footer-menu__link(href="#") Мужская стрижка
-                li.footer-menu__item
-                    a.footer-menu__link(href="#") Тонирование
-                li.footer-menu__item
-                    a.footer-menu__link(href="#") Бритьё
-        .footer__bottom
-            nav.footer__secondary
-                ul.footer-2ry-menu
-                    li.footer-2ry-menu__item
-                        a.footer-2ry-menu__link(href="terms.html") Условия использования
-                    li.footer-2ry-menu__item
-                        a.footer-2ry-menu__link(href="policy.html") Политика конфиденциальности
-            .footer__socials
-                a.social(href="#") VK <img src="./img/icons/vk.svg" />
-                a.social(href="#") FB <img src="./img/icons/facebook.svg" />
-                a.social(href="#") IN <img src="./img/icons/instagram.svg" />
-    p.footer__motto Мы не пытаемся, доказать, что являемся лучшими, мы просто делаем нашу работу.
-    .footer__spinner
-    p.footer__copy &copy; Willmade 2019
+    .footer__wrapper
+        .footer__legals
+            .footer__logo
+                img.footer__logo-s(src="./img/logo-small-white.svg", alt="Логотип ЭКСКО маленький зелёный")
+                img.footer__logo-l(src="./img/logo-full-white.svg", alt="Логотип ЭКСКО")
+            p.footer__copy Группа&nbsp;компаний <br>ЭКСКО&nbsp;©&nbsp;2019
+
+        .footer__navigation
+            .footer__nav
+                h3.footer__title Навигация
+                nav.footer-nav
+                    ul.footer-nav__list
+                        li.footer-nav__item: a.footer-nav__link.footer-nav__link--main(href="expertise.html") Экспертиза
+                        li.footer-nav__item: a.footer-nav__link(href="expertise.html#goods") Товарная экспертиза
+                        li.footer-nav__item: a.footer-nav__link(href="expertise.html#judical") Судебная экспертиза
+                        li.footer-nav__item: a.footer-nav__link(href="expertise.html#customs") Экспертиза для таможенных целей
+                        li.footer-nav__item: a.footer-nav__link(href="expertise.html#technical") Строительно-техническая экспертиза
+                        li.footer-nav__item: a.footer-nav__link(href="expertise.html#law44") Экспертиза товаров, закупаемых в&nbsp;соответствии с&nbsp;ФЗ&nbsp;№44, ФЗ&nbsp;№223
+
+            .footer__nav
+                h3.footer__title Навигация
+                nav.footer-nav
+                    ul.footer-nav__list
+                        li.footer-nav__item: a.footer-nav__link.footer-nav__link--main(href="eval.html") Оценка
+                        li.footer-nav__item: a.footer-nav__link.footer-nav__link--main(href="nongov.html") Негосударственная экспертиза проектной документации
+                        li.footer-nav__item: a.footer-nav__link.footer-nav__link--main(href="hotels.html") Классификация гостиниц
+                        li.footer-nav__item: a.footer-nav__link.footer-nav__link--main(href="certification.html") Сертификация
+
+        .footer__contacts
+            h3.footer__title Контакты
+            p Адрес:&nbsp;236040 г.&nbsp;Калининград, ул.&nbsp;Университетская,&nbsp;2-г, офис&nbsp;309.<br>
+            p Телефон/факс: <a href="tel:+74012519111">(4012) 519-111</a> <br>Телефон: <a href="tel:+74012771292">(4012) 771-292</a>
+            p Электронная почта: <a href="mailto:exco@list.ru">exco@list.ru</a>

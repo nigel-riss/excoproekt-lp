@@ -1,45 +1,22 @@
-///////////////////////////////////////
-//            Breakpoints            //
-///////////////////////////////////////
+// breakpoints
 
-
-// Explicit mobile breakpoint
-@mixin atMobile {
-  @media (max-width: 374px) {
-    @content;
-  }
-}
-
-@mixin atMobileM {
-  @media (min-width: 375px) {
-    @content;
-  }
-}
-
-// Tablets portrait
+// tablets portrait
 @mixin atTablet {
-  @media (min-width: 600px) {
-    @content;
+  @media (min-width: 700px) {
+      @content;
   }
 }
 
 // small desktop and tablets landscape
 @mixin atDesktopS {
   @media (min-width: 1000px) {
-    @content;
+      @content;
   }
 }
 
 // medium desktop and generic laptops
 @mixin atDesktopM {
   @media (min-width: 1200px) {
-    @content;
-  }
-}
-
-// large desktop
-@mixin atDesktopL {
-  @media (min-width: 1500px) {
-    @content;
+      @content;
   }
 }

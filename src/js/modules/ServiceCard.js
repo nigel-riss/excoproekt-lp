@@ -1,5 +1,0 @@
-class ServiceCard {
-  constructor() {
-    
-  }
-}

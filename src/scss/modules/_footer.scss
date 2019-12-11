@@ -1,160 +1,153 @@
 .footer {
-  // positioning
-  position: relative;
-
-  // box model
-  padding: 2rem;
-  padding-top: 4rem;
-
-  @include atDesktopS {
     // box model
-    display: flex;
-    padding: 4rem;
-  }
+    padding: 50px 20px;
+    padding-top: 400px;
+
+    // visual
+    background-color: $green;
+
+    @include atTablet {
+        // box model
+        padding: 110px 40px;
+        padding-bottom: 40px;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding: 110px 50px;
+        padding-bottom: 80px;
+    }
 }
 
-.footer__content {
-  @include atDesktopS {
+.footer__wrapper {
     // box model
-    margin-right: 3rem;
-  }
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1120px;
+
+    @include atTablet {
+        // box model
+        flex-direction: row;
+    }
+}
+
+.footer__legals {
+    // box model
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    order: 3;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        order: 1;
+        padding: 7px 0;
+        padding-right: 40px;
+    }
+
+    @include atDesktopS {
+        padding-bottom: 0;
+    }
 }
 
 .footer__logo {
-  // box model
-  margin: 0 auto;
-  margin-bottom: 2.5rem;
-  width: 180px;
-
-  @include atDesktopS {
     // box model
-    margin: 0;
-    margin-bottom: 1rem;
-  }
+    width: 60px;
+
+    // visual
+    fill: $white;
 }
 
-.footer__logo img,
-.footer__logo svg {
-  // box model
-  width: 100%;
-}
-
-.footer__menu {
-  // box model
-  padding-bottom: 0.75rem;
-
-  // border
-  border-bottom: 1px solid $dorado;
-}
-
-.footer__bottom {
-  // box model
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
-
-  @include atTablet {
+.footer__logo-s {
     // box model
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0.5rem;
-  }
+    width: 100%;
 }
 
-.footer__secondary {
-  // box model
-  order: 1;
-
-  @include atTablet {
+.footer__logo-l {
     // box model
-    order: 0;
-  }
-}
-
-.footer__socials {
-  // box model
-  order: 0;
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
-
-  // typography
-  text-align: center;
-
-  @include atTablet {
-    // box model
-    padding: 0;
-    order: 1;
-
-    // typography
-    white-space: nowrap;
-  }
-}
-
-.footer__motto {
-  // positioning
-  position: relative;
-  z-index: 2;
-
-  // box model
-  margin-bottom: 5rem;
-
-  // typography
-  color: $light;
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.75;
-  text-transform: uppercase;
-
-  @include atTablet {
-    // box model
-    max-width: 320px;
-    // margin-bottom: 2rem;
-  }
-
-  @include atDesktopS {
-    // box model
-    flex-basis: 400px;
-    padding-right: 80px;
-    margin-bottom: 0;
-    margin-top: 3.5rem;
-  }
-}
-
-.footer__spinner {
-  // positioning
-  position: absolute;
-  bottom: -0px;
-  right: -90px;
-
-  // box model
-  height: 360px;
-  width: 360px;
-
-  // visual
-  background-image: url('./img/bgs/willmade/wm-footer-round.svg');
-  // opacity: 0;
-  pointer-events: none;
+    display: none;
 }
 
 .footer__copy {
-  // typography
-  color: $zobra;
-  font-size: 0.625rem;
-  letter-spacing: 0.08em;
-  text-align: center;
-  text-transform: uppercase;
+    // typography
+    color: $black;
+    line-height: 1.75;
 
-  @include atTablet {
-    // positioning
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-  }
+    @include atDesktopS {
+        // box model
+        margin-bottom: 7px;
+    }
+}
 
-  @include atDesktopS {
-    // positioning
-    right: 4rem;
-  }
+.footer__navigation {
+    // box model
+    order: 1;
+
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        order: 2;
+        padding-right: 40px;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-direction: row;
+        padding-right: 0;
+    }
+}
+
+.footer__nav {
+    // box model
+    margin-bottom: 30px;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 0;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding-right: 40px;
+    }
+}
+
+.footer__title {
+    // box model
+    display: none;
+}
+
+.footer__contacts {
+    // box model
+    margin-bottom: 30px;
+    order: 2;
+
+    @include atTablet {
+        // box model
+        margin-top: -0.75rem;
+    }
+}
+
+.footer__contacts p {
+    // typography
+    color: $white;
+    line-height: 1.75;
+}
+
+.footer__contacts a {
+    // typography
+    color: $white;
+    text-decoration: none;
+}
+
+.footer__contacts a:hover {
+    // typography
+    text-decoration: underline;
 }

@@ -1,44 +1,56 @@
 html {
-  // typography
-  font-family: $mainFont;
-  font-size: 14px;
+    // typography
+    color: $black;
+    font-family: 'Arimo', Arial, Helvetica, sans-serif;
+    font-size: 14px;
 
-  @media (min-width: 360px) {
-    font-size: 16px;
-  }
-
-  @include atTablet {
-    font-size: 18px;
-  }
-
-  @include atDesktopS {
-    font-size: 16px;
-  }
+    @include atDesktopM {
+        // typography
+        font-size: 15px;
+    }
 }
 
+// Box sizing fix
 body {
-  // positioning
-  position: relative;
+    // positioning
+    position: relative;
 
-  // box model
-  box-sizing: border-box;
+    // box model
+    box-sizing: border-box;
 
-  // typography
-  color: $light;
-  line-height: 1.5;
+    // typography
+    color: $dark;
 
-  // visual
-  background-color: $dune;
-
-  @include atDesktopS {
     // visual
-    background-image: url('./img/bgs/pattern.jpg'); 
-  }
+    overflow-x: hidden;
 }
 
 *,
 *::before,
 *::after {
-  // box model
-  box-sizing: inherit;
+    // box model
+    box-sizing: inherit;
+}
+
+main {
+    // box model
+    // padding: 40px 20px;
+
+    // @include atTablet {
+    //     // box model
+    //     padding: 30px 0;
+    // }
+}
+
+hr {
+    border-top: 1px solid rgba($green, 0.25);
+}
+
+.nowrap {
+    // typography
+    white-space: nowrap;
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
 }

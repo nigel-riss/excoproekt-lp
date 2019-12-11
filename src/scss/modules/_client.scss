@@ -1,0 +1,56 @@
+.client {
+    // box model
+    flex-basis: 40%;
+    margin-bottom: 20px;
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 33%;
+    }
+}
+
+.client__logo {
+    // box model
+    height: 100px;
+    width: 100%;
+    padding: 5px;
+
+    // typography
+    text-align: center;
+
+    @include atTablet {
+        // box model
+        height: 125px;
+    }
+}
+
+.client__logo img {
+    // box model
+    height: 100%;
+    object-position: center;
+}
+
+.client__title {
+    // box model
+    padding: 0 5px;
+
+    // typography
+    color: $greyText;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center;
+
+    @include atTablet {
+        // typography
+        font-size: 0.875rem;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding: 0 10px;
+
+        // typography
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}

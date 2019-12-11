@@ -1,0 +1,55 @@
+.docs-download {
+    // box model
+    padding: 25px;
+    margin-bottom: 3rem;
+
+    // visual
+    background-color: #f0f0f0;
+    box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.05);
+}
+
+p.docs-download__text {
+    // box model
+    margin-bottom: 2rem;
+
+    // typography
+    color: $black;
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.docs-download__links {
+    // box model
+    display: flex;
+    // justify-content: space-around;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.docs-download__links a {
+    // box model
+    color: $black;
+    margin: 0 15px;
+}
+
+.docs-download__links a:hover {
+    // typography
+    text-decoration: none;
+}
+
+.docs-download__links a::before {
+    content: "";
+
+    // box model
+    display: inline-block;
+    vertical-align: bottom;
+    height: 22px;
+    width: 22px;
+    margin-right: 0.25rem;
+
+    // visual
+    background-image: url('./img/icons/doc-dwn.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}

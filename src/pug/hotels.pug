@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="style.css")
+
+        title «ЭКСКО» — Классификация гостиниц
+
+    body
+        header.header
+            .header__wrapper
+                include ./modules/_header-top.pug
+
+                .header__caption
+                    h1.header__title Классификация гостиниц
+
+        main
+            section.section
+                .section__wrapper
+                    header.section__header
+                        p.section__subtitle <a href="services.html">Услуги</a> — Классификация гостиниц
+                        h2.section__title Классификация гостиниц и&nbsp;других средств размещения
+                        p.section__text — присвоение средству размещения (гостинице) определенной категории, установленной «Положением о&nbsp;классификации гостиниц», утвержденным Постановлением Правительства Российской Федерации <span class="nowrap">от 16 февраля 2019 г.</span> №158.
+
+                    .section__content
+                        p Объектами классификации являются следующие средства размещения:
+
+                        ul
+                            li гостиница, отель;
+                            li курортный отель, санаторий;
+                            li апартотель;
+                            li мотель;
+                            li комплекс апартаментов;
+                            li акватель;
+                            li хостел;
+                            li фермерский гостевой дом (комнаты);
+                            li горный приют, дом охотника, дом рыбака, шале, бунгало.
+
+                        .section__float-l
+                            a(href="./docs/accreditation.pdf")
+                                img(src="./img/accreditation.jpg", alt="Аттестат аккредитации")
+
+                        p ЭКСКО аккредитовано <a href="https://tourism.gov39.ru/activities/classification.php">Министерством по&nbsp;туризму Калининградской области</a> для&nbsp;проведения работ по&nbsp;классификации гостиниц и&nbsp;иных средств размещения.
+
+                        p Организация включена в&nbsp;<a href="https://xn----7sba3acabbldhv3chawrl5bzn.xn--p1ai/index.php/displayOrganization/index">Федеральный перечень аккредитованных организаций</a> за&nbsp;номером 220000105.
+
+                        p ЭКСКО выполняет работы по&nbsp;классификации гостиниц — проводит оценку соответствия на&nbsp;всей территории России в&nbsp;соответствии с&nbsp;Федеральным законом <span class="nowrap">от 24.11.1996</span> <span class="nowrap">№ 132-ФЗ</span> «Об&nbsp;основах туристской деятельности в&nbsp;Российской Федерации».
+
+                        p По&nbsp;результатам классификации гостиниц выдается Свидетельство о&nbsp;присвоении гостинице категории от&nbsp;«без звезд» до&nbsp;«5&nbsp;звезд».
+
+                        p Классификация гостиниц является обязательным условием для&nbsp;осуществления деятельности по&nbsp;предоставлению гостиничных услуг, в&nbsp;соответствии с&nbsp;Федеральным законом <span class="nowrap">№ 16-ФЗ</span> «О&nbsp;внесении изменений в&nbsp;Федеральный закон «Об&nbsp;основах туристской деятельности в&nbsp;Российской Федерации»:
+
+                        ul
+                            li с 1 июля 2019 года — для&nbsp;гостиниц с&nbsp;номерным фондом более 50&nbsp;номеров;
+                            li с 1 января 2020 года — для&nbsp;гостиниц с&nbsp;номерным фондом более 15&nbsp;номеров;
+                            li с 1 января 2021 года — в&nbsp;отношении всех остальных гостиниц.
+
+                        .docs-download
+                            p.docs-download__text Для прохождения процедуры классификации Вам необходимо предоставить заявку, анкету, документы по перечню
+                            .docs-download__links
+                                a(href="./docs/application.docx") Заявка
+                                a(href="./docs/form.docx") Анкета
+                                a(href="./docs/docs-list.docx") Перечень документов
+
+                        .section__float-l
+                            a(href="./img/certificate-full.jpg")
+                                img(src="./img/certificate.jpg", alt="Пример свидетельства о присвоении категории")
+
+                        p В течение 3-х дней после предоставления необходимой документации и&nbsp;обследования заявленного объекта Вы&nbsp;получите «Свидетельство о&nbsp;присвоении категории» Вашего объекта размещения.
+
+                        p Квалифицированные эксперты ЭКСКО проведут консультации и&nbsp;окажут методическую помощь Заявителям&nbsp;по всем вопросам подготовки, проведения классификации и&nbsp;оценки соответствия гостиниц, санаториев, домов отдыха, пансионатов, хостелов и&nbsp;других средств размещения.
+
+
+            include ./modules/_contacts.pug
+
+        include ./modules/_footer.pug
+
+        script(src="scripts.js")

@@ -1,7 +1,7 @@
 import MobileMenu from './modules/MobileMenu';
-import PriceTable from './modules/PriceTable';
-import BranchCard from './modules/BranchCard';
+// import Spoiler from './modules/Spoiler';
+import Map from './modules/Map';
 
-const mobileMenu = new MobileMenu();
-const priceTable = new PriceTable();
-const branchCard = new BranchCard();
+const menu = new MobileMenu();
+// const spoiler = new Spoiler();
+const map = new Map();

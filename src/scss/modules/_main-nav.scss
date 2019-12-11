@@ -1,62 +1,111 @@
 .main-nav {
-  // box model
-  margin: 0;
-  padding: 2rem;
-  padding-top: 110px;
+    // positioning
+    position: fixed;
+    bottom: -100px;
+    top: -100px;
+    right: 0;
 
-  // typography
-  font-size: 1rem;
-
-  // visual
-  background-color: $dune;
-
-  // list
-  list-style: none;
-
-  @include atTablet {
-    // box model
-    padding: 4rem;
-    padding-bottom: 2rem;
-    padding-top: 160px;
-  }
-
-  @include atDesktopS {
     // box model
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
     padding: 0;
+    width: 100%;
 
     // visual
-    background-color: transparent;
-  }
+    background-color: $white;
+    transition: all 0.25s ease-in-out;
+
+    @include atTablet {
+        // positioning
+        position: relative;
+        bottom: auto;
+        top: auto;
+        right: auto;
+
+        // box model
+        flex-direction: row;
+        justify-content: flex-start;
+        // border: 2px dashed fuchsia;
+        width: 100%;
+
+        // visual
+        background-color: transparent;
+
+        // list
+        list-style: none;
+    }
+}
+
+.main-nav--hidden {
+    // positioning
+    right: -110%;
+
+    @include atTablet {
+        // positioning
+        right: auto;
+    }
 }
 
 .main-nav__item {
-  // box model
-  margin-right: 2rem;
-}
-
-.main-nav__link {
-  // box model
-  display: block;
-  padding: 0.75rem 0;
-
-  // typography
-  color: $light;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  @include atDesktopS {
     // box model
-    padding: 0.5rem 0;
+    margin: 5px;
+    padding: 10px 0px;
 
     // typography
-    font-size: 0.75rem;
-  }
+    text-align: center;
+
+    @include atTablet {
+        // box model
+        padding: 10px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding: 10px 25px;
+    }
 }
 
-.main-nav__link:hover {
-  // typography
-  text-decoration: underline;
+.main-nav__item a {
+    // positioning
+    position: relative;
+
+    // typography
+    color: $green;
+    font-size: 1.25rem;
+    text-decoration: none;
+
+    @include atTablet {
+        // typography
+        color: $white;
+        font-size: 1rem;
+    }
+}
+
+.main-nav__item a::after {
+    content: '';
+    bottom: -7px;
+    left: 2px;
+
+    // positioning
+    position: absolute;
+
+    // box model
+    height: 1px;
+    width: 0%;
+
+    // visual
+    background-color: transparent;
+    transition: all 0.25s ease-out;
+}
+
+.main-nav__item a:hover::after {
+    // box model
+    width: 100%;
+
+    // visual
+    background-color: $light;
 }

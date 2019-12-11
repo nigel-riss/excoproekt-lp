@@ -1,0 +1,63 @@
+.services {
+    // box model
+    padding: 50px 20px;
+
+    @include atTablet {
+        // box model
+        padding: 80px 40px;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding: 80px 50px;
+    }
+}
+
+.services__wrapper {
+    // box model
+    max-width: 1120px;
+    margin: 0 auto;
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.services__title {
+    // box model
+    display: none;
+
+    // typography
+    font-size: 0;
+}
+
+.services__content {
+    @include atTablet {
+        // box model
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 66%;
+        order: 2;
+    }
+}
+
+.services__more {
+    @include atTablet {
+        // box model
+        padding-right: 50%;
+    }
+
+    @include atDesktopS {
+        // box model
+        flex-basis: 33%;
+        order: 1;
+        padding-right: 40px;
+    }
+}

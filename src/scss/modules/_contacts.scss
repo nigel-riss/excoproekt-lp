@@ -1,0 +1,54 @@
+.contacts {
+    // positioning
+    position: relative;
+
+    // visual
+    background-color: $dark;
+}
+
+.contacts__map {
+    // positioning
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.contacts__overlay {
+    // positioning
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.contacts .section__header {
+    // positioning
+    position: relative;
+    z-index: 3;
+}
+
+.contacts a {
+    // typography
+    color: $light;
+    text-decoration: none;
+}
+
+.contacts a:hover {
+    // typography
+    text-decoration: underline;
+}
+
+[class *="-inner-panes"] {
+    filter: grayscale(100%) invert(92%);
+    -ms-filter: grayscale(100%) invert(92%);
+    // -webkit-filter: sepia(0.1) hue-rotate(140deg) invert(90%) saturate(25%);
+    -webkit-filter: grayscale(100%) invert(92%);
+    -moz-filter: grayscale(100%) invert(92%);
+    -o-filter: grayscale(100%) invert(92%);
+    
+    // transition: all 0.25s ease-out;
+}

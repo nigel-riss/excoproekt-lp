@@ -1,16 +1,19 @@
-.header__top
+//- .header__top
+.header__top.header__top--green
     a.header__logo(href="index.html")
-        img(src="./img/logo.svg", alt="логотип Willmade Barbershop")
+        img.header__logo--full(src="./img/logo-full-white.svg", alt="Логотип группы компанмй ЭКСКО")
+        img.header__logo--small(src="./img/logo-small-white.svg", alt="Логотип группы компанмй ЭКСКО")
 
-    nav.header__nav.header__nav--closed
-        ul.main-nav
-            li.main-nav__item: a.main-nav__link(href="about.html") О Барбершопе
-            li.main-nav__item: a.main-nav__link(href="city.html") Страница города
-            li.main-nav__item: a.main-nav__link(href="haircut.html") Страница услуги
-            li.main-nav__item: a.main-nav__link(href="terms.html") Условия использования
-            li.main-nav__item: a.main-nav__link(href="policy.html") Политика конфиденциальности
-            li.main-nav__item: a.main-nav__link(href="404.html") Страница 404
+    nav.header__nav
+        ul.main-nav.main-nav--hidden
+            li.main-nav__item: a(href="index.html") Главная
+            li.main-nav__item: a(href="services.html") Услуги
+            li.main-nav__item: a(href="contacts.html") Контакты
+
+    .header__contacts
+        a.header__phone(href="tel:+74012519111") +7 (4012) 519 111
+        a.header__email(href="mailto:exco@list.ru") exco@list.ru
 
     .header__menu-button
-        button.menu-button(role="button") ≡
+        button.menu-button
             .menu-button__middle

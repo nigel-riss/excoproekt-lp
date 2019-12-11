@@ -1,0 +1,95 @@
+.ctc-form {
+    // positioning
+    position: relative;
+    z-index: 2;
+
+    // box model
+    padding: 30px 25px;
+
+    // visual
+    background-color: $white;
+}
+
+.ctc-form__fieldset {
+    // box model
+    margin: 0;
+    padding: 0;
+
+    // border
+    border: none;
+}
+
+.ctc-form__input {
+    // box model
+    display: block;
+    margin-bottom: 15px;
+    padding: 15px 0;
+    width: 100%;
+
+    // border
+    border: none;
+    border-bottom: 1px solid $dark;
+}
+
+.ctc-form__text {
+    // box model
+    display: block;
+    margin-bottom: 30px;
+    padding: 15px 0;
+    width: 100%;
+
+    // border
+    border: none;
+    border-bottom: 1px solid $dark;
+}
+
+.ctc-form__button {
+    // box model
+    display: block;
+    margin-bottom: 30px;
+    padding: 15px 0;
+    width: 100%;
+
+    // typography
+    color: $white;
+
+    // visual
+    background-color: $green;
+    cursor: pointer;
+    
+    // border
+    border: none;
+    border-radius: 10px;
+}
+
+.ctc-form__button:hover {
+    // visual
+    opacity: 0.75;
+}
+
+p.ctc-form__note {
+    // box model
+    margin: 0;
+    margin-bottom: 25px;
+
+    // typography
+    font-size: 0.75rem;
+    line-height: 1.75;
+    text-align: center;
+}
+
+.ctc-form__application {
+    // box model
+    display: block;
+
+    // typography
+    color: $green;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.ctc-form__application:hover {
+    // typography
+    text-decoration: underline;
+}

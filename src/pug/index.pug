@@ -14,19 +14,64 @@ html(lang="ru")
     body
         .wrapper
             header.header
+                .header__menu-button
 
-            section.section.section--docs
+                .header__contacts
+
+                .header__main-nav
+
+                .header__content
+                    h1.header__title 
+                        span.header__title-top Негосударственная 
+                        span.header__title-middle экспертиза
+                        span.header__title-bottom проектной документации
+                    p.header__text Закажите у нас экспертизу вашей проектной документации и получите объективные результаты по разумным ценам и в сжатые сроки
+                    a.button(href="#") Заказать экспертизу
+
+            section.section.section--cert
+                header.section__header
+                    h2.section__title
+                .section__content
+                .section__cert: img(src="", alt="")
 
             section.section.section--free-cons
+                header.section__header
+                    h2.section__title
+                .section__content
+                    form.ctc-form(action="")
 
             section.section.section--docs
+                header.section__header
+                    h2.section__title
+                .section__content
 
             section.section.section--request
+                header.section__header
+                    h2.section__title
+                .section__content
+                    form.ctc-form(action="")
 
             section.section.section--experts
+                header.section__header
+                    h2.section__title
+                .section__content
 
             section.section.section--contacts
+                header.section__header
+                    h2.section__title
+                .section__content
+                    .section__map
+                        .map#map
+                    .section__contacts
 
             footer.footer
+                .footer__top
+                    .footer__logo
+                        img(src="", alt="")
+                    .footer__menu
+                    .footer__legals
+
+                .footer__bottom
+                    
 
         script(src="scripts.js")

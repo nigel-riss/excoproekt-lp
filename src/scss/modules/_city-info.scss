@@ -1,0 +1,61 @@
+.city-info {
+  // box model
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+
+  @include atDesktopS {
+    // box model
+    flex-direction: column;
+    padding: 2rem 4rem;
+
+    // visual
+    background-color: rgba($light, 0.2);
+  }
+}
+
+.city-info__work-time {
+  // box model
+  margin: 0;
+
+  // typography
+  color: $sapling;
+  font-family: $displayFont;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1;
+
+  @include atDesktopS {
+    // typography
+    text-align: right;
+
+    // box model
+    order: 1;
+  }
+}
+
+.city-info__work-time span {
+  // box model
+  display: block;
+
+  // typography
+  color: $light;
+  font-family: $mainFont;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.city-info__city-selector {
+  // typography
+  text-align: right;
+
+  @include atDesktopS {
+    // box model
+    margin-bottom: 1rem;
+  }
+}

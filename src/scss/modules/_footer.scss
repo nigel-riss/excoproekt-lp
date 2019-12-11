@@ -1,0 +1,160 @@
+.footer {
+  // positioning
+  position: relative;
+
+  // box model
+  padding: 2rem;
+  padding-top: 4rem;
+
+  @include atDesktopS {
+    // box model
+    display: flex;
+    padding: 4rem;
+  }
+}
+
+.footer__content {
+  @include atDesktopS {
+    // box model
+    margin-right: 3rem;
+  }
+}
+
+.footer__logo {
+  // box model
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+  width: 180px;
+
+  @include atDesktopS {
+    // box model
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.footer__logo img,
+.footer__logo svg {
+  // box model
+  width: 100%;
+}
+
+.footer__menu {
+  // box model
+  padding-bottom: 0.75rem;
+
+  // border
+  border-bottom: 1px solid $dorado;
+}
+
+.footer__bottom {
+  // box model
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+
+  @include atTablet {
+    // box model
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+  }
+}
+
+.footer__secondary {
+  // box model
+  order: 1;
+
+  @include atTablet {
+    // box model
+    order: 0;
+  }
+}
+
+.footer__socials {
+  // box model
+  order: 0;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+
+  // typography
+  text-align: center;
+
+  @include atTablet {
+    // box model
+    padding: 0;
+    order: 1;
+
+    // typography
+    white-space: nowrap;
+  }
+}
+
+.footer__motto {
+  // positioning
+  position: relative;
+  z-index: 2;
+
+  // box model
+  margin-bottom: 5rem;
+
+  // typography
+  color: $light;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.75;
+  text-transform: uppercase;
+
+  @include atTablet {
+    // box model
+    max-width: 320px;
+    // margin-bottom: 2rem;
+  }
+
+  @include atDesktopS {
+    // box model
+    flex-basis: 400px;
+    padding-right: 80px;
+    margin-bottom: 0;
+    margin-top: 3.5rem;
+  }
+}
+
+.footer__spinner {
+  // positioning
+  position: absolute;
+  bottom: -0px;
+  right: -90px;
+
+  // box model
+  height: 360px;
+  width: 360px;
+
+  // visual
+  background-image: url('./img/bgs/willmade/wm-footer-round.svg');
+  // opacity: 0;
+  pointer-events: none;
+}
+
+.footer__copy {
+  // typography
+  color: $zobra;
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include atTablet {
+    // positioning
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  @include atDesktopS {
+    // positioning
+    right: 4rem;
+  }
+}

@@ -1,0 +1,266 @@
+.header {
+  // positioning
+  position: relative;
+
+  // visual
+  background-color: $dune;
+  background-image: url('./img/bgs/header-bg.jpg');
+  background-image: url('./img/bgs/branches/1.jpg');
+  background-position: center;
+  background-size: cover;
+
+}
+
+.header__overlay {
+  // positioning
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+
+  // visual
+  background-color: $dune;
+  mix-blend-mode: multiply;
+}
+
+.header--main {
+  // box model
+  height: 100vh;
+  min-height: 540px;
+  max-height: 720px;
+
+  @include atTablet {
+    // box model
+    max-height: 1024px;
+  }
+
+  @include atDesktopS {
+    // box model
+    max-height: 768px;
+  }
+
+  @include atDesktopM {
+    // box model
+    max-height: 900px;
+  }
+
+  @include atDesktopL {
+    // box model
+    max-height: 1080px;
+  }
+}
+
+.header__content {
+  // positioning
+  position: relative;
+  z-index: 2;
+
+  // box model
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  height: 100%;
+
+  @include atTablet {
+    // box model
+    padding: 4rem;
+  }
+}
+
+.header__top {
+  // box model
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+
+  @include atDesktopS {
+    // box model
+    justify-content: flex-start;
+  }
+}
+
+.header__logo {
+  // positioning
+  position: relative;
+  left: -0.125rem;
+  z-index: 5;
+
+  // box model
+  display: block;
+  height: 3rem;
+}
+
+.header__logo svg {
+  // box model
+  height: 100%;
+  // width: 100%;
+}
+
+.header__nav {
+  // positioning
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 4;
+
+  // visual
+  opacity: 1;
+  transition: all 0.25s ease-out;
+
+  @include atDesktopS {
+    // positioning
+    position: relative;
+
+    // box model
+    margin-top: -0.25rem;
+    padding-left: 3.5rem;
+  }
+}
+
+.header__nav--closed {
+  // positioning
+  transform: translateY(-110%);
+
+  // visual
+  opacity: 0;
+
+  @include atDesktopS {
+    // positioning
+    transform: none;
+
+    // visual
+    opacity: 1;
+  }
+}
+
+.header__menu-button {
+  // positioning
+  position: relative;
+  z-index: 5;
+
+  @include atDesktopS {
+    // box model
+    display: none;
+  }
+}
+
+.header__city-info {
+  @include atDesktopS {
+    // positioning
+    position: absolute;
+    right: 4rem;
+    right: 0;
+    top: 10rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.header__caption {
+  // box model
+  margin-bottom: 2rem;
+}
+
+.header__title {
+  // box model
+  margin: 0;
+  margin-bottom: 0.25em;
+
+  // typography
+  color: $sapling;
+  font-family: $displayFont;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+
+  @include atDesktopS {
+    // box model
+    width: 560px;
+
+    // typography
+    font-size: 2.25rem;
+  }
+}
+
+.header__title strong {
+  // box model
+  display: block;
+  margin: 0;
+
+  // typography
+  color: $light;
+  font-family: $mainFont;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  @include atDesktopS {
+    // typography
+    font-size: 2rem;
+  }
+}
+
+.header__online {
+  // box model
+  padding: 1.5rem 2rem;
+  margin: 0 -2rem;
+
+  // visual
+  background-color: rgba($light, 0.2);
+
+  @include atDesktopS {
+    // box model
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-left: -2rem;
+    padding: 1rem 2rem;
+
+    margin-left: -4rem;
+    padding: 1rem 4rem;
+  }
+}
+
+.header__online-text {
+  // box model
+  margin: 0;
+  margin-bottom: 1rem;
+
+  // typography
+  color: $light;
+  line-height: 1.25;
+
+  @include atDesktopS {
+    // box model
+    margin: 0;
+    margin-right: 2rem;
+  }
+}
+
+.header__online-text strong {
+  // box model
+  display: block;
+
+  // typography
+  color: $sapling;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.header__online-icons {
+  // box model
+  display: flex;
+  margin: 0 -1rem;
+
+  // typography
+  font-size: 0;
+
+  // flex-wrap: wrap;
+  justify-content: space-between;
+}

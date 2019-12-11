@@ -1,0 +1,383 @@
+.branch-card {
+  // positioning
+  position: relative;
+
+  // box model
+  // margin: 0 -1rem;
+  margin-bottom: 2rem;
+
+  // visual
+  background-color: $dune;
+  box-shadow: 0 0 12px rgba(black, 0.5);
+  overflow: hidden;
+  transition: all 0.25s ease-out;
+}
+
+.branch-card--open {
+  .branch-card__spoiler {
+    // box model
+    max-height: 200px;
+
+    * {
+      // visual
+      opacity: 1;
+    }
+  }
+
+  .branch-card__open-spoiler svg {
+    // positioning
+    transform: rotate(180deg);
+  }
+}
+
+.branch-card__back {
+  // positioning
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.branch-card__back img {
+  // box model
+  height: 100%;
+  width: 100%;
+
+  // visual
+  object-fit: cover;
+}
+
+.branch-card__overlay {
+  // positioning
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  // box model
+  // max-width: 300px;
+
+  // visual
+  background-color: $dune;
+  mix-blend-mode: multiply;
+  // mix-blend-mode: overlay;
+}
+
+.branch-card__content {
+  // box model
+  // max-width: 300px;
+}
+
+.branch-card__header {
+  // positioning
+  position: relative;
+  z-index: 2;
+
+  // box model
+  padding: 2rem;
+  // padding: 1.5rem 1rem;
+  // padding: 2rem 1.5rem;
+  // padding-bottom: 2.5rem;
+}
+
+.branch-card__address {
+  // box model
+  margin: 0;
+  margin-bottom: 0.25rem;
+  max-width: 260px;
+
+  // typography
+  color: $light;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.branch-card__address::before {
+  content: "";
+
+  // positioning
+  position: relative;
+  bottom: -3px;
+
+  // box model
+  display: inline-block;
+  vertical-align: baseline;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
+
+  // visual
+  background-image: url('./img/icons/placeholder.svg');
+  background-size: cover;
+}
+
+.branch-card__landmarks {
+  // box model
+  margin-bottom: 1rem;
+  padding-left: 0.635rem;
+  padding-left: 0.25rem;
+}
+
+.branch-card__landmark {
+  // positioning
+  position: relative;
+
+  // box model
+  display: inline-block;
+
+  // typography
+  color: $sapling;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.branch-card__landmark:hover {
+  // typography
+  text-decoration: underline;
+}
+
+.branch-card__landmark::before {
+  content: "";
+
+  // box model
+  display: inline-block;
+  // height: 0.75em;
+  // width: 0.75em;
+  height: 0.5rem;
+  width: 0.5rem;
+  margin-right: 0.5em;
+
+  // border
+  border: 1px solid $light;
+  border-radius: 50%;
+}
+
+.branch-card__phone {
+  // typography
+  color: $light;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  // visual
+  transition: all 0.25s ease-out;
+}
+
+.branch-card__phone::before {
+  content: "";
+
+  // positioning
+  position: relative;
+  bottom: -3px;
+
+  // box model
+  display: inline-block;
+  vertical-align: baseline;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
+
+  // visual
+  background-image: url('./img/icons/phone-call.svg');
+  background-size: cover;
+}
+
+.branch-card__phone:hover {
+  // typography
+  color: $sapling;
+}
+
+.branch-card__close-card {
+  // positioning
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+
+  // box model
+  height: 1.5rem;
+  width: 1.5rem;
+
+  // visual
+  cursor: pointer;
+  fill: $sapling;
+  opacity: 0.75;
+}
+
+.branch-card__open-spoiler {
+  // positioning
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  // box model
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  padding: 0.375em;
+
+  // visual
+  cursor: pointer;
+  fill: $sapling;
+  stroke: $sapling;
+  // opacity: 0.5;
+  transition: all 0.25s ease-out;
+}
+
+.branch-card__open-spoiler:hover {
+  // visual
+  background-color: rgba($dorado, 0.5);
+}
+
+.branch-card__open-spoiler svg {
+  // box model
+  height: 100%;
+
+  // visual
+  transition: all 0.25s ease-out;
+}
+
+.branch-card__spoiler {
+  // positioning
+  position: relative;
+  z-index: 2;
+
+  // box model
+  height: auto;
+  max-height: 0;
+
+  // visual
+  // opacity: 0;
+  overflow: hidden;
+  // background-color: rgba($dorado, 0.5);
+  transition: all 0.5s ease-out;
+
+  * {
+    // visual
+    opacity: 0.5;
+    transition: all 0.5s ease-out;
+  }
+}
+
+.branch-card__features-n-rating {
+  // box model
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 2rem;
+  padding-top: 1.5rem;
+}
+
+.branch-card__features {
+  // box model
+  display: flex;
+  justify-content: flex-start;
+}
+
+.branch-card__rating {
+  // box model
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding-bottom: 1rem;
+
+  // typography
+  color: $light;
+  font-weight: 700;
+}
+
+.branch-card__rating::after {
+  content: "";
+
+  // box model
+  height: 2rem;
+  width: 2rem;
+
+  // visual
+  background-image: url('./img/icons/star.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.branch-card__footer {
+  // box model
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1rem;
+
+  // border
+  border-top: 1px solid rgba($sapling, 0.2);
+}
+
+.branch-card__social {
+  // box model
+  flex-basis: 50%;
+  // flex-grow: 0;
+  display: flex;
+  justify-content: flex-start;
+  // justify-content: center;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.branch-card__network {
+  // box model
+  display: inline-block;
+  vertical-align: top;
+  // margin-right: 1rem;
+
+  // typography
+  color: $light;
+  font-size: 0;
+  text-decoration: none;
+
+  // visual
+  transition: all 0.25s ease-out;
+}
+
+.branch-card__network svg {
+  // box model
+  height: 2rem;
+  width: 2rem;
+  padding: 0.5rem;
+
+  // visual
+  fill: $light;
+  transition: all 0.25s ease-out;
+}
+
+.branch-card__network:hover {
+  // visual
+  background-color: rgba($light, 0.2);
+}
+
+.branch-card__book {
+  // box model
+  flex-basis: 50%;
+  flex-grow: 0;
+  padding: 1rem;
+  max-width: 140px;
+
+  // typography
+  color: $light;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  line-height: 1rem;
+  line-height: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  // visual
+  transition: all 0.25s ease-out;
+}
+
+.branch-card__book:hover {
+  // visual
+  background-color: rgba($light, 0.2);
+}

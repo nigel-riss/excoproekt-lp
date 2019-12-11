@@ -1,0 +1,31 @@
+.big-slide {
+  // positioning
+  // position: absolute;
+}
+
+.big-slide__image {
+
+}
+
+.big-slide__image img {
+
+}
+
+.big-slide__content {
+  // box model
+  padding: 2rem;
+
+  // visual
+  background-color: rgba($cocoa, 0.9);
+}
+
+.big-slide__title {
+  // typography
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.big-slide__text {
+  // typography
+  line-height: 1.5;
+}

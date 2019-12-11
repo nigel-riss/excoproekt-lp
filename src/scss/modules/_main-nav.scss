@@ -1,0 +1,62 @@
+.main-nav {
+  // box model
+  margin: 0;
+  padding: 2rem;
+  padding-top: 110px;
+
+  // typography
+  font-size: 1rem;
+
+  // visual
+  background-color: $dune;
+
+  // list
+  list-style: none;
+
+  @include atTablet {
+    // box model
+    padding: 4rem;
+    padding-bottom: 2rem;
+    padding-top: 160px;
+  }
+
+  @include atDesktopS {
+    // box model
+    display: flex;
+    padding: 0;
+
+    // visual
+    background-color: transparent;
+  }
+}
+
+.main-nav__item {
+  // box model
+  margin-right: 2rem;
+}
+
+.main-nav__link {
+  // box model
+  display: block;
+  padding: 0.75rem 0;
+
+  // typography
+  color: $light;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @include atDesktopS {
+    // box model
+    padding: 0.5rem 0;
+
+    // typography
+    font-size: 0.75rem;
+  }
+}
+
+.main-nav__link:hover {
+  // typography
+  text-decoration: underline;
+}

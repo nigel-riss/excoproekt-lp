@@ -1,0 +1,51 @@
+.service-icon {
+  // positioning
+  position: relative;
+
+  // box model
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 1rem;
+  width: 48px;
+  height: 48px;
+  // border: 2px dashed fuchsia;
+
+  @include atMobileM {
+    // box model
+    margin-right: 1.25rem;
+  }
+}
+
+.service-icon__title {
+  // positioning
+  position: absolute;
+  top: 0;
+  transform: translate(0, -100%);
+
+  // box model
+  display: flex;
+  // display: none;
+  align-items: center;
+  height: 2.5em;
+  margin: 0;
+  // margin-bottom: 0.5rem;
+  // vertical-align: middle;
+
+  // typography
+  color: $light;
+  font-weight: 400;
+  font-size: 0.6rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.service-icon__image {
+  // box model
+  height: 40px;
+  width: 40px;
+
+  // visual
+  fill: $light;
+}

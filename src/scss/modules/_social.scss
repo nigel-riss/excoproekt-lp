@@ -1,0 +1,29 @@
+.social {
+  // box model
+  display: inline-block;
+  vertical-align: top;
+
+  // typography
+  color: $light;
+  font-size: 0;
+  text-decoration: none;
+
+  // visual
+  transition: all 0.25s ease-out;
+}
+
+.social svg {
+  // box model
+  height: 2rem;
+  width: 2rem;
+  padding: 0.5rem;
+
+  // visual
+  fill: $light;
+  transition: all 0.25s ease-out;
+}
+
+.social:hover {
+  // visual
+  background-color: rgba($light, 0.2);
+}

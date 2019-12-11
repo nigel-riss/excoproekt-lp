@@ -1,0 +1,192 @@
+
+
+// Vars
+$barHeight: 3px;
+$barWidth: 32px;
+$barColor: $light;
+// $buttonWidth: 128px;
+// $buttonHeight: 128px;
+
+
+.menu-button {
+  // positioning
+  position: relative;
+
+  // box model
+  height: $barHeight * 7;
+  width: $barWidth;
+  padding: 0;
+
+  // typography
+  font-size: 0;
+
+  // visual
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+
+  // border
+  border: none;
+}
+
+.menu-button:hover,
+.menu-button:focus {
+  .menu-button__middle {
+    // box model
+    width: $barWidth !important;
+  }
+}
+
+.menu-button:hover::after,
+.menu-button:focus::after {
+  // box model
+  width: $barWidth !important;
+}
+
+.menu-button:before {
+  content: "";
+
+  // positioning
+  position: absolute;
+  transform-origin: 50% 50%;
+  left: 0;
+  top: 0;
+
+  // box model
+  height: $barHeight;
+  width: $barWidth;
+
+  // visual
+  background-color: $barColor;
+
+  // animation
+  animation-name: open-top;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+.menu-button__middle {
+  content: "";
+
+  // positioning
+  position: absolute;
+  transform-origin: 50% 50%;
+  right: 0;
+  top: $barHeight * 2;
+
+  // box model
+  height: $barHeight;
+  width: $barWidth * 0.6;
+
+  // visual
+  background-color: $barColor;
+  opacity: 1;
+  transition: all 0.25s ease-out;
+}
+
+.menu-button::after {
+  content: "";
+
+  // positioning
+  position: absolute;
+  transform-origin: 50% 50%;
+  right: 0;
+  top: $barHeight * 4;
+
+  // box model
+  height: $barHeight;
+  width: $barWidth * 0.3;
+
+  // visual
+  background-color: $barColor;
+  transition: all 0.25s ease-out;
+  transition-delay: 0.25s;
+
+  // animation
+  animation-name: open-bottom;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
+.menu-button--close::before {
+  // animation
+  animation-name: close-top;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.menu-button--close .menu-button__middle {
+  // visual
+  opacity: 0;
+}
+
+.menu-button--close::after {
+    // animation
+    animation-name: close-bottom;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+// Menu button animations
+@keyframes close-top {
+  0% {
+    transform: none;
+  }
+  
+  50% {
+    transform: translate(0, $barHeight * 2);
+  }
+  
+  100% {
+    transform: translate(0, $barHeight * 2) rotate(45deg);
+  }
+}
+
+@keyframes open-top {
+  0% {
+    transform: translate(0, $barHeight * 2) rotate(45deg);
+  }
+  
+  50% {
+    transform: translate(0, $barHeight * 2);
+  }
+  
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes close-bottom {
+  0% {
+    transform: none;
+    width: $barWidth;
+  }
+  
+  50% {
+    transform: translate(0, -$barHeight * 2);
+  }
+  
+  100% {
+    transform: translate(0, -$barHeight * 2) rotate(-45deg);
+    width: $barWidth;
+  }
+}
+
+@keyframes open-bottom {
+  0% {
+    transform: translate(0, -$barHeight * 2) rotate(-45deg);
+  }
+  
+  50% {
+    transform: translate(0, -$barHeight * 2);
+  }
+  
+  100% {
+    transform: none;
+  }
+}

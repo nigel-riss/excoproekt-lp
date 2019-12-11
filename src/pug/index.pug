@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="style.css")
+
+        title Willmade Barbershop
+
+    body
+        //- .grid
+        header.header.header--main
+            include ./modules/_header-top.pug
+
+            .header__city-info
+                p.header__work-time Режим Работы <span>с 10:00 до 21:00</span>
+
+                .header__city-selector
+                    a.city-selector(href="#")
+                        p.city-selector__your-city Ваш город
+                        p.city-selector__current-city Калининград
+
+
+            .header__caption
+                h1.header__title Willmade Barbershop
+                p.header__description Неповторимая классика для&nbsp;настоящих ценителей
+
+        main
+            section.section.section--dark
+                .section__content
+                    h2.title-2 <em>Willmade</em> О Барбершопе
+                    p.section-text Персональные данные при посещении сайта передаются пользователем добровольно, к ним могут относиться: имя, фамилия, отчество, номера телефонов, адреса электронной почты, адреса для доставки товаров или оказания услуг, реквизиты компании, которую представляет пользователь, должность в компании, которую представляет пользователь, аккаунты в социальных сетях; поля форм могут запрашивать и иные данные.
+                    p.section-text Эти данные собираются в целях оказания услуг или продажи товаров, связи с пользователем или иной активности пользователя на сайте, а также, чтобы отправлять пользователям информацию, которую они согласились получать.
+                    p.section-text Мы не проверяем достоверность оставляемых данных, однако не гарантируем качественного исполнения заказов или обратной связи с нами при некорректных данных.
+                    p.section-text Данные собираются имеющимися на сайте формами для заполнения (например, регистрации, оформления заказа, подписки, оставления отзыва, обратной связи и иными).
+
+                    article.feature
+                        .feature__icon: img(src="./img/icons/vip.svg", alt="")
+                        h3.feature__title Сервис
+                        p.feature__description Каждый наш сотрудник проходит специализированное обучение, а регламенты позволяют запоминать предпочтения клиентов
+                    article.feature
+                        .feature__icon: img(src="./img/icons/scrab.svg", alt="")
+                        h3.feature__title Комфорт
+                        p.feature__description Была продумана абсолютно каждая деталь, для создания максимально комфортных условий для наших гостей
+                    article.feature
+                        .feature__icon: img(src="./img/icons/coloring.svg", alt="")
+                        h3.feature__title Эргономика
+                        p.feature__description Для нас это неотъемлемая часть сервиса. Грамотная эргономика создаёт дополнительный комфорт для гостя
+
+                    a.ghost-button(href="about.html") Узнать больше
+
+            section.section
+                header.section__header
+                    h2.section__title Адреса <br>и&nbsp;контакты
+                    p.section__subtitle Барбершопов
+                .section__content
+                    article.branch-card.branch-card--open
+                        .branch-card__back: img(src="./img/bgs/header-bg.jpg", alt="")
+                        header.branch-card__header
+                            h3.branch-card__address ул. Генерала Толстикова, 2А
+                            .branch-card__landmarks
+                                a.branch-card__landmark(href="#") м. Новоскворецкая
+                                a.branch-card__landmark(href="#") ТРЦ «Московский»
+                            a.branch-card__phone(href="tel:+79114556789") +7 911 455-67-89
+                            .branch-card__close-card: img(src="./img/icons/close.svg", alt="")
+                            .branch-card__open-spoiler.branch-card__open-spoiler--opened: img(src="./img/icons/down.svg", alt="")
+                        .branch-card__spoiler
+                            .branch-card__features-n-rating
+                                .branch-card__features
+                                    .service-icon
+                                        h4.service-icon__title Бесплатная парковка
+                                        img.service-icon__image(src="./img/icons/parking.svg", alt="")
+                                    .service-icon
+                                        h4.service-icon__title Татуировка
+                                        img.service-icon__image(src="./img/icons/tattoo.svg", alt="")
+                                    .service-icon
+                                        h4.service-icon__title VIP Кресло
+                                        img.service-icon__image(src="./img/icons/vip.svg", alt="")
+                                .branch-card__rating 4,7
+                            footer.branch-card__footer
+                                .branch-card__social
+                                    a.branch-card__network(href="#") VK <img src="./img/icons/vk.svg" />
+                                    a.branch-card__network(href="#") FB <img src="./img/icons/facebook.svg" />
+                                    a.branch-card__network(href="#") IN <img src="./img/icons/instagram.svg" />
+                                a.branch-card__book(href="#") Записаться
+
+                    article.branch-card
+                        .branch-card__back: img(src="./img/bgs/header-bg.jpg", alt="")
+                        header.branch-card__header
+                            h3.branch-card__address ул. Ново-скворецкая, 125
+                            .branch-card__landmarks
+                                a.branch-card__landmark(href="#") ТЦ «Васильевский»
+                            a.branch-card__phone(href="tel:+79114556789") +7 911 455-67-89
+                            .branch-card__close-card: img(src="./img/icons/close.svg", alt="")
+                            .branch-card__open-spoiler: img(src="./img/icons/down.svg", alt="")
+                        .branch-card__spoiler
+                            .branch-card__features-n-rating
+                                .branch-card__features
+                                    .service-icon
+                                        h4.service-icon__title Бесплатная парковка
+                                        img.service-icon__image(src="./img/icons/parking.svg", alt="")
+                                    .service-icon
+                                        h4.service-icon__title Маникюр
+                                        img.service-icon__image(src="./img/icons/manicure.svg", alt="")
+                                .branch-card__rating 4,7
+                            footer.branch-card__footer
+                                .branch-card__social
+                                    a.branch-card__network(href="#") VK <img src="./img/icons/vk.svg" />
+                                    a.branch-card__network(href="#") IN <img src="./img/icons/instagram.svg" />
+                                a.branch-card__book(href="#") Записаться
+
+
+            section.section
+                header.section__header
+                    h2.section__title Прайс-лист на&nbsp;услуги
+                    p.section__subtitle Price List
+                    //- p.section__subtitle <strong>Prices</strong>
+                .section__content
+                    h3.inner-title Основные услуги
+                    .price-table
+                        .price-table__row.price-table__row--open
+                            .price-table__caption
+                                .price-table__name Стрижка мужская <small>подбор стиля, мытьё головы</small>
+                                .price-table__value 1&nbsp;200
+                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
+                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+                        .price-table__row
+                            .price-table__caption
+                                .price-table__name Опасное бритьё лица
+                                .price-table__value 1&nbsp;100
+                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
+                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+                        .price-table__row
+                            .price-table__caption
+                                .price-table__name Опасное бритьё головы
+                                .price-table__value 1&nbsp;200
+                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
+                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+                        .price-table__row
+                            .price-table__caption
+                                .price-table__name Стрижка детская <small>с&nbsp;3 до&nbsp;11&nbsp;лет</small>
+                                .price-table__value 800
+                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
+                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+                        .price-table__row
+                            .price-table__caption
+                                .price-table__name Стрижка под&nbsp;машинку
+                                .price-table__value 600
+                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
+                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+                        .price-table__row
+                            .price-table__caption
+                                .price-table__name Оформление бороды /&nbsp;усов
+                                .price-table__value 800
+                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
+                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+                        .price-table__row
+                            .price-table__caption
+                                .price-table__name Окантовка
+                                .price-table__value 400
+                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
+                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+                        .price-table__row
+                            .price-table__caption
+                                .price-table__name Мытьё головы и&nbsp;укладка
+                                .price-table__value 500
+                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
+                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+                        .price-table__row
+                            .price-table__caption
+                                .price-table__name Камуфляж головы
+                                .price-table__value 1&nbsp;200
+                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
+                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+                        .price-table__row
+                            .price-table__caption
+                                .price-table__name Камуфляж бороды
+                                .price-table__value 800
+                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
+                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+
+                    h3.inner-title Комплексные услуги
+                    .price-table
+                        .price-table__row
+                            .price-table__caption
+                                .price-table__name Папа + Сын
+                                .price-table__value 1&nbsp;800
+                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
+                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+                        .price-table__row
+                            .price-table__caption
+                                .price-table__name Мужская стрижка +&nbsp;Оформление бороды
+                                .price-table__value 1&nbsp;800
+                            .price-table__close-spoiler: img(src="./img/icons/down.svg", alt="")
+                            p.price-table__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum culpa earum facere sint vitae quis quam sapiente quidem. Voluptas provident unde minima quo nihil eos voluptatem placeat illum laborum! Nostrum!
+
+
+            section.section.section--dark
+                header.section__header
+                    h2.section__title Наши <br>услуги
+                    p.section__subtitle Технологии
+                .section__content
+                    article.service-card
+                        .service-card__back: img(src="./img/bgs/services/service-1.jpg", alt="")
+
+                        header.service-card__header
+                            h3.service-card__title Мужская стрижка
+                            p.service-card__number #01
+
+                        .service-card__content
+                            p.service-card__text Элегантность — это не только лёгкость, и не только свобода от любых ограничений или неловкости. Она представляет собой исполненную вдохновения, изысканную отточенность каждой детали и лоск
+                            a.service-card__more(href="#") Узнать больше
+
+            section.section
+                header.section__header
+                    h2.section__title Наши <br>услуги
+                    p.section__subtitle Технологии
+
+                .section__content
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat qui, error iusto consectetur ut harum quod facilis veniam consequatur expedita amet, ipsa aspernatur saepe. Hic enim exercitationem omnis nisi quas?
+                    p Numquam sapiente voluptate modi quam exercitationem quibusdam et architecto consequuntur amet! Adipisci, corporis fugiat tempore natus odit corrupti recusandae quo dolorum quidem vel amet mollitia saepe, dicta incidunt et modi.
+                    p Deleniti nulla perferendis animi distinctio repudiandae non molestiae modi libero maxime soluta sunt, illum iusto. Magni minima tempore iure ipsam, nobis molestias quam earum vel adipisci deserunt blanditiis perferendis illum?
+
+        footer.footer
+
+        script(src="scripts.js")

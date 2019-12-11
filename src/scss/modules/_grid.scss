@@ -1,0 +1,29 @@
+.grid {
+  // display: none;
+
+  // positioning
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+
+  // visual
+  // background-image: repeating-linear-gradient(to bottom, fuchsia 0,fuchsia 1rem, transparent 1rem, transparent 2rem);
+  background-image: repeating-linear-gradient(to bottom,
+                                            fuchsia 0, fuchsia 1px, transparent 1px, transparent 4px,
+                                            rgba(fuchsia, 0.5) 4px, rgba(fuchsia, 0.5) 5px, transparent 5px, transparent 8px,
+                                            rgba(fuchsia, 0.5) 8px, rgba(fuchsia, 0.5) 9px, transparent 9px, transparent 12px,
+                                            rgba(fuchsia, 0.5) 12px, rgba(fuchsia, 0.5) 13px, transparent 13px, transparent 16px),
+                    repeating-linear-gradient(to right,
+                                            fuchsia 0, fuchsia 1px, transparent 1px, transparent 4px,
+                                            rgba(fuchsia, 0.5) 4px, rgba(fuchsia, 0.5) 5px, transparent 5px, transparent 8px,
+                                            rgba(fuchsia, 0.5) 8px, rgba(fuchsia, 0.5) 9px, transparent 9px, transparent 12px,
+                                            rgba(fuchsia, 0.5) 12px, rgba(fuchsia, 0.5) 13px, transparent 13px, transparent 16px);
+
+  // background-position: center center;
+
+  opacity: 0.25;
+  pointer-events: none;
+}

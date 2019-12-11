@@ -1,0 +1,119 @@
+.slider-nav {
+  // box model
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  // typography
+  color: $sapling;
+  font-size: 0.875rem;
+}
+
+.slider-nav__dash {
+  // box model
+  height: 2px;
+  flex-grow: 100;
+  min-width: 10px;
+  margin: 0 1rem;
+
+  // visual
+  background-color: rgba($sapling, 0.75);
+  background-color: $sapling;
+}
+
+.slider-nav__title {
+  // typography
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.slider-nav__controls {
+  // box model
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.slider-nav__prev,
+.slider-nav__next {
+  // typography
+  color: $sapling;
+  font-size: 0;
+
+  // box model
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0.25rem;
+
+  // border
+  border: none;
+  border-radius: 3px;
+
+  // visual
+  background-color: transparent;
+  background-position: bottom 0.5rem center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0.875rem;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: all 0.25s ease-out;
+}
+
+.slider-nav__prev:hover,
+.slider-nav__next:hover,
+.slider-nav__prev:focus,
+.slider-nav__next:focus {
+  // visual
+  background-color: rgba($light, 0.2);
+  opacity: 1;
+  outline: none;
+}
+
+.slider-nav__prev:active,
+.slider-nav__next:active {
+  // positioning
+  position: relative;
+  top: 0.125rem;
+
+  // visual
+  opacity: 0.75;
+}
+
+.slider-nav__prev {
+  // visual
+  background-image: url('./img/icons/arrow-left.svg');
+}
+
+.slider-nav__next {
+  // visual
+  background-image: url('./img/icons/arrow-right.svg');
+}
+
+.slider-nav__indicator {
+  // typography
+  white-space: nowrap;
+
+  // box model
+  margin: 0 0.5rem;
+  margin-top: -0.125rem;
+}
+
+.slider-nav__current {
+  // box model
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 0.25rem;
+
+  // typography
+  font-weight: 700;
+  font-size: 1.75em;
+}
+
+.slider-nav__max {
+  font-size: 1rem;
+}

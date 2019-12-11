@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="style.css")
+
+        title Willmade Barbershop
+
+    body
+        .wrapper
+            //- .grid
+            header.header
+                include ./modules/_header-top.pug
+
+                .header__caption
+                    //- h1.header__title Информация <strong>Условия <br>использования</strong>
+                    //- h1.header__title Willmade Barbershop <strong>О Барбершопе</strong>
+                    h1.header__title О Барбершопе <strong>Willmade Barbershop</strong>
+
+            main
+                section.section.section--dark
+                    .section__content
+                        h2.title-2 Willmade — это барбершоп в&nbsp;классическом понимании этого слова
+                        p.section-text Как настоящие джентльмены, мы не будем нахваливать качество своих стрижек, достаточно будет просто взглянуть на работы наших барберов. Хотим отметить, что мы работаем как с короткими стрижками, так и с удлинёнными волосами, классика и нью-скул, опасное бритье и простое подбривание. Мы уважаем классику, но при этом наши мастера идут в ногу со временем
+                        p.section-text WILLMADE был открыт, чтобы провести четкую грань между подражателями культуры и теми, кто с достоинством проносит ее традиции через все рыночные испытания. Чтобы сделать высокий сервис не синонимом чего-то элитарного, а правилом хорошего тона.
+
+                    aside.section__aside
+                        .sidenote
+                            h3.sidenote__title Стандарты
+                            p.sidenote__text Всю роскошь WILLMADE принимает за необходимый стандарт. Стандарт не только в плане интерьерных решений, но и качества стрижек и сервиса.
+                        .sidenote
+                            h3.sidenote__title Комфорт
+                            p.sidenote__text Мы не экономили на креслах, мебели или материалах, продумали абсолютно каждую деталь нашего интерьера до мелочей, чтобы создать максимально комфортные условия для наших гостей.
+
+
+                section.section.section--dark
+                    .section__content
+                        h2.title-2 Барбершоп для&nbsp;тех, кто&nbsp;ценит стиль, сервис <em>и&nbsp;подход к&nbsp;стрижкам</em>
+                        p.section-text В нашем барбершопе каждый гость может ощутить себя настоящим королём с нашим сервисом
+
+                    .section__content
+                        article.feature
+                            .feature__icon: img(src="./img/icons/vip.svg", alt="")
+                            h3.feature__title Сервис
+                            p.feature__description Каждый наш сотрудник проходит специализированное обучение, а регламенты позволяют запоминать предпочтения клиентов
+                        article.feature
+                            .feature__icon: img(src="./img/icons/scrab.svg", alt="")
+                            h3.feature__title Комфорт
+                            p.feature__description Была продумана абсолютно каждая деталь, для создания максимально комфортных условий для наших гостей
+                        article.feature
+                            .feature__icon: img(src="./img/icons/coloring.svg", alt="")
+                            h3.feature__title Эргономика
+                            p.feature__description Для нас это неотъемлемая часть сервиса. Грамотная эргономика создаёт дополнительный комфорт для гостя
+
+
+
+            include ./modules/_footer.pug
+
+            include ./modules/_yclients-dummy.pug
+
+        script(src="scripts.js")
+

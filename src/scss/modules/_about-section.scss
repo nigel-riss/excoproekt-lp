@@ -1,0 +1,50 @@
+.about-section {
+    // box model
+    margin-top: -3rem;
+    padding: 2rem;
+
+    @include atTablet {
+        // box model
+        padding: 4rem;
+    }
+
+    @include atDesktopS {
+        // box model
+        display: flex;
+    }
+}
+
+.about-section__content {
+    @include atDesktopS {
+        // box model
+        flex-basis: 50%;
+        padding-right: 2rem;
+    }
+}
+
+.about-section__header {
+    // box model
+    margin-bottom: 2rem;
+}
+
+.about-section__description {
+    // box model
+    margin-bottom: 2rem;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 3rem;
+    }
+}
+
+.about-section__cta {
+    // typography
+    text-align: center;
+
+    @include atDesktopS {
+        // typography
+        text-align: left;
+    }
+}
+
+.about-section__slider {}

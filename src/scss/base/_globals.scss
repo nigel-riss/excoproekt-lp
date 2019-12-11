@@ -1,0 +1,44 @@
+html {
+  // typography
+  font-family: $mainFont;
+  font-size: 14px;
+
+  @media (min-width: 360px) {
+    font-size: 16px;
+  }
+
+  @include atTablet {
+    font-size: 18px;
+  }
+
+  @include atDesktopS {
+    font-size: 16px;
+  }
+}
+
+body {
+  // positioning
+  position: relative;
+
+  // box model
+  box-sizing: border-box;
+
+  // typography
+  color: $light;
+  line-height: 1.5;
+
+  // visual
+  background-color: $dune;
+
+  @include atDesktopS {
+    // visual
+    background-image: url('./img/bgs/pattern.jpg'); 
+  }
+}
+
+*,
+*::before,
+*::after {
+  // box model
+  box-sizing: inherit;
+}

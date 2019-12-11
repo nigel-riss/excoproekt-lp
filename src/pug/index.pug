@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -7,130 +7,26 @@ html(lang="en")
 
         link(rel="stylesheet", href="style.css")
 
-        <script src="https://api-maps.yandex.ru/2.1/?apikey=c74fa3df-581b-427a-9ae6-f565f4548493&lang=ru_RU" type="text/javascript">
-        </script>
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=c74fa3df-581b-427a-9ae6-f565f4548493&lang=ru_RU", type="text/javascript")
 
-        title «ЭКСКО»
+        title ЭКСКО — Негосударственная экспертиза проекктной документации
 
     body
-        header.header.header--main
-            .header__wrapper
-                include ./modules/_header-top.pug
+        .wrapper
+            header.header
 
-                .header__caption.header__caption--main
-                    h1.header__title <span>Экспертиза</span> <br><span>Оценка</span> <br><span>Классификация гостиниц</span> <br><span>Негосударственная экспертиза проектной документации</span> <br><span>Сертификация</span>
-                    //- h1.header__title Услуги экспертизы, оценки и&nbsp;cертификации в&nbsp;Калининграде
+            section.section.section--docs
 
-        main
-            section.section.section--fix-h#about
-                .section__wrapper
-                    header.section__header
-                        p.section__subtitle 01 — О компании
-                        h2.section__title Независимая экспертная организация
+            section.section.section--free-cons
 
-                    .section__content
-                        p.section__paragraph <strong>ЭКСКО</strong> — независимая экспертная организация, член Калининградской торгово-промышленной палаты, осуществляет деятельность с&nbsp;2003 года. Экспертные работы проводятся по&nbsp;заявкам российских, иностранных юридических и&nbsp;физических лиц, как&nbsp;на&nbsp;территории Российской Федерации, так&nbsp;и&nbsp;за&nbsp;рубежом.
+            section.section.section--docs
 
-                        p.section__paragraph <strong>Независимость, объективность, опыт и&nbsp;профессионализм экспертов</strong> помогут Вам убедиться в&nbsp;качестве и&nbsp;соответствии объектов экспертизы (товаров, услуг, проектной документации, процессов и др.) и&nbsp;определить стоимость ваших активов.
+            section.section.section--request
 
-            section.section.section--fix-h.section--grey#services
-                .section__wrapper
-                    header.section__header
-                        p.section__subtitle 02 — Услуги
-                        h2.section__title Наши <em>услуги</em>
-                        p.section__text как&nbsp;эффективный инструмент бизнеса —&nbsp;помогают предпринимателям успешно и&nbsp;оперативно решать задачи, способствуют повышению результативности их&nbsp;деятельности и&nbsp;быть на&nbsp;шаг впереди конкурентов.
+            section.section.section--experts
 
-                        p.section__text Мы нацелены на улучшение условий обслуживания и&nbsp;ускорение процессов оказания услуг с&nbsp;минимальными затратами для&nbsp;заявителей.
+            section.section.section--contacts
 
-                        p.section__text В основе высокого качества услуг организации —&nbsp;опыт (на&nbsp;рынке экспертизы с&nbsp;2003 года), штат квалифицированных экспертов, деловые связи с&nbsp;экспертными организациями страны и&nbsp;партнерами зарубежных странах.
-
-                    .section__content
-                        article.spoiler.spoiler--open
-                            header.spoiler__header
-                                .spoiler__icon: img(src="./img/icons/search.svg", alt="")
-                                h3.spoiler__title Экспертиза
-                                //- .spoiler__button
-                            .spoiler__content
-                                p.spoiler__text Равным образом сложившаяся структура организации в&nbsp;значительной степени обуславливает создание направлений прогрессивного развития. Повседневная практика показывает, что&nbsp;начало повседневной работы
-                                .spoiler__more
-                                    a.more-button(href="expertise.html") Подробнее
-
-                        article.spoiler.spoiler--open
-                            header.spoiler__header
-                                .spoiler__icon: img(src="./img/icons/calculator.svg", alt="")
-                                h3.spoiler__title Оценка
-                                //- .spoiler__button
-                            .spoiler__content
-                                p.spoiler__text Определение рыночной стоимости товара с&nbsp;учетом его фактического состояния и&nbsp;качества (на&nbsp;дату оценки) как&nbsp;наиболее вероятной цены, по&nbsp;которой данный объект оценки может быть отчужден на&nbsp;открытом рынке в&nbsp;условиях конкуренции.
-                                .spoiler__more
-                                    a.more-button(href="eval.html") Подробнее
-
-                        article.spoiler.spoiler--open
-                            header.spoiler__header
-                                .spoiler__icon: img(src="./img/icons/clipboard-list.svg", alt="")
-                                h3.spoiler__title Негосударственная экспертиза проектной документации
-                                //- .spoiler__button
-                            .spoiler__content
-                                p.spoiler__text Таким образом консультация с&nbsp;широким активом позволяет оценить значение соответствующий условий активизации.
-                                .spoiler__more
-                                    a.more-button(href="nongov.html") Подробнее
-
-                        article.spoiler.spoiler--open
-                            header.spoiler__header
-                                .spoiler__icon: img(src="./img/icons/half-star.svg", alt="")
-                                h3.spoiler__title Классификация гостиниц
-                                //- .spoiler__button
-                            .spoiler__content
-                                p.spoiler__text Товарищи! дальнейшее развитие различных форм деятельности играет важную роль в&nbsp;формировании систем массового участия. Не&nbsp;следует, однако забывать, что&nbsp;начало повседневной работы по&nbsp;формированию позиции требуют определения и&nbsp;уточнения новых предложений.
-                                .spoiler__more
-                                    a.more-button(href="hotels.html") Подробнее
-
-                        article.spoiler.spoiler--open
-                            header.spoiler__header
-                                .spoiler__icon: img(src="./img/icons/clipboard-check.svg", alt="")
-                                h3.spoiler__title Сертификация
-                                //- .spoiler__button
-                            .spoiler__content
-                                p.spoiler__text Экспертные работы проводятся по заявкам российских и&nbsp;иностранных юридических и&nbsp;физических лиц, как&nbsp;на&nbsp;территории региона, Российской Федерации, так и&nbsp;за&nbsp;рубежом.
-                                .spoiler__more
-                                    a.more-button(href="certification.html") Подробнее
-
-
-            section.section.section--fix-h#clients
-                .section__wrapper
-                    header.section__header
-                        p.section__subtitle 03 — Клиенты
-                        h2.section__title Наши <em>клиенты</em>
-                        p.section__text Экспертные работы проводятся по&nbsp;заявкам российских и&nbsp;иностранных юридических и&nbsp;физических лиц, как&nbsp;на&nbsp;территории региона, Российской Федерации, так&nbsp;и&nbsp;за&nbsp;рубежом.
-
-                    .section__content
-                        .clients
-                            article.client
-                                .client__logo: img(src="./img/clients/alians.png", alt="Винно-Коньячный завод Альянс-1892" title="Винно-Коньячный завод Альянс-1892")
-                                h3.client__title Винно-Коньячный завод Альянс-1892
-
-                            article.client
-                                .client__logo: img(src="./img/clients/arbitr.png", alt="Арбитражный суд Калининградской области" title="Арбитражный суд Калининградской области")
-                                h3.client__title Арбитражный суд Калининградской области
-
-                            article.client
-                                .client__logo: img(src="./img/clients/mushkino.png", alt="Сафари-парк Мушкино" title="Сафари-парк Мушкино")
-                                h3.client__title Сафари-парк Мушкино
-
-                            article.client
-                                .client__logo: img(src="./img/clients/mchs.png", alt="МЧС Российской Федерации" title="МЧС Российской Федерации")
-                                h3.client__title МЧС Российской Федерации
-
-                            article.client
-                                .client__logo: img(src="./img/clients/kaliningrad.png", alt="Правительство города Калининграда" title="Правительство города Калининграда")
-                                h3.client__title Правительство города Калининграда
-
-                            article.client
-                                .client__logo: img(src="./img/clients/avtotor.png", alt="Автотор" title="Автотор")
-                                h3.client__title Автотор
-
-            include ./modules/_contacts.pug
-
-        include ./modules/_footer.pug
+            footer.footer
 
         script(src="scripts.js")

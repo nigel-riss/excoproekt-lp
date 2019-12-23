@@ -18,7 +18,24 @@ html(lang="ru")
 
                 .header__contacts
 
-                .header__main-nav
+                nav.header__main-nav
+                    .header__logo: img(src="./img/logo.jpg", alt="Логотип ЭКСКО")
+
+                    ul.main-nav
+                        li.main-nav__item
+                            a.main-nav__link(href="#") Главная
+                        li.main-nav__item
+                            a.main-nav__link(href="#") Аккредитация
+                        li.main-nav__item
+                            a.main-nav__link(href="#") Заявителю
+                        li.main-nav__item
+                            a.main-nav__link(href="#") Заявка на экспертизу
+                        li.main-nav__item
+                            a.main-nav__link(href="#") Эксперты
+                        li.main-nav__item
+                            a.main-nav__link(href="#") Контакты
+
+                    a.header__book(href="#") Консультация бесплатно
 
                 .header__content
                     h1.header__title 
@@ -30,45 +47,105 @@ html(lang="ru")
 
             section.section.section--cert
                 header.section__header
-                    h2.section__title
+                    h2.section__title Проводим экспертизу на законных основаниях!
                 .section__content
+                    h3.title-3 наша аккредитация
+                    p.section-text ООО «ЭКСКО» аккредитовано в соответствии с Федеральным законом от 28.12.2013г. N 412-ФЗ «Об аккредитации в национальной системе аккредитации»
+                    h3.title-3 регламент услуги
+                    p.section-text Работы проводятся в строгом соответствии с регламентом организации, утвержденным 27.01.2018г.
                 .section__cert: img(src="", alt="")
 
             section.section.section--free-cons
                 header.section__header
-                    h2.section__title
+                    h2.section__title Получите бесплатную консультацию сейчас, не откладывая
                 .section__content
+                    h3.title-3 заполните форму и мы перезвоним вам
                     form.ctc-form(action="")
 
             section.section.section--docs
                 header.section__header
-                    h2.section__title
+                    h2.section__title Рассмотрим ваши документы уже сегодня
                 .section__content
+                    h3.title-3 необходимо:
+                    p.section-text Заявление о проведении негосударственной экспертизы.
+                    p.section-text Проектная документация в необходимом для проведения эксперитзы объеме, который определяется в договоре.
+                    p.section-text Задание на проектирование (копия) - в случае если вы направляете к нам на экспертизу проектную документацию или проектную документацию и результаты инженерных изысканий.
+                    p.section-text Расчеты конструктивных и технологических решений, используемых в проектной документации и материалы инженерных изысканий - в случае дополнительного истребования экспертной организацией.
 
             section.section.section--request
                 header.section__header
-                    h2.section__title
+                    h2.section__title Заказать проведение экспертизы очень просто
                 .section__content
+                    h3.title-3 оставьте заявку и мы свяжемся с вами
                     form.ctc-form(action="")
 
             section.section.section--experts
                 header.section__header
-                    h2.section__title
+                    h2.section__title С вами будут работать только лучшие эксперты
                 .section__content
+                    h3.title-3 наши специалисты — настоящие профессионалы своего дела
+                .section__content
+                    article.expert
+                        p.expert__name Глебичева Алла Геннадьевна
+                        p.expert__profi направление деятельности:
+                        p.expert__skill «Охрана окружающей среды»
+                        p.expert__attestat аттестат №МС-Э-50-2-9594, срок окончания - 11.09.2022
+                    article.expert
+                        p.expert__name Ленинг Эрик Константинович
+                        p.expert__profi направление деятельности:
+                        p.expert__skill «Конструктивные решения»
+                        p.expert__attestat аттестат №МС-Э-53-2-9693, срок окончания - 15.09.2022
+                    article.expert
+                        p.expert__name Навицкас Артур Витасович
+                        p.expert__profi направление деятельности:
+                        p.expert__skill «Системы электроснабжения»
+                        p.expert__attestat аттестат №МС-Э-58-16-9877, срок окончания - 03.11.2022
+                    article.expert
+                        p.expert__name Сорокина Людмила Федоровна
+                        p.expert__profi направление деятельности:
+                        p.expert__skill «Системы связи и сигнализации»
+                        p.expert__attestat аттестат №МС-Э-1-17-10103, срок окончания - 22.01.2023
+                    article.expert
+                        p.expert__name Шуманова Лариса Петровна
+                        p.expert__profi направление деятельности:
+                        p.expert__skill «Водоснабжение, водоотведение и канализация»
+                        p.expert__attestat аттестат №МС-Э-35-2-6050, срок окончания - 07.07.2020
+
 
             section.section.section--contacts
                 header.section__header
-                    h2.section__title
+                    h2.section__title Наши контакты
                 .section__content
                     .section__map
                         .map#map
                     .section__contacts
+                        article.contact
+                            h3.contact__title Телефоны
+                            p.contact__text +7 (4012) 519-111 +7 (4012) 771-292
+                        article.contact
+                            h3.contact__title E-mail
+                            p.contact__text exco@list.ru
+                        article.contact
+                            h3.contact__title Адрес
+                            p.contact__text 236040, г.Калининград, ул.Университетская,2Г (б/ц “Юбилейный”) офис 309
+                        article.contact
+                            h3.contact__title Время работы
+                            p.contact__text пн-чт: с 9-00 до 18-00 пт: с 9-00 до 17-00 обед: с 13-00 до 14-00
+                        article.contact
+                            h3.contact__title ИНН
+                            p.contact__text 3906145890
+                            h3.contact__title ОГРН
+                            p.contact__text 1053903340688
+                            h3.contact__title ОКПО
+                            p.contact__text 78643354
 
             footer.footer
                 .footer__top
                     .footer__logo
                         img(src="", alt="")
-                    .footer__menu
+                    nav.footer__menu
+                        ul.footer-menu
+                            li.footer-menu__item
                     .footer__legals
 
                 .footer__bottom

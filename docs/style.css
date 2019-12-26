@@ -151,7 +151,10 @@ template {
 html {
   color: #002b20;
   font-family: 'Arimo', Arial, Helvetica, sans-serif;
-  font-size: 14px; }
+  font-size: 16px; }
+  @media (max-width: 374px) {
+    html {
+      font-size: 14px; } }
   @media (min-width: 1200px) {
     html {
       font-size: 15px; } }
@@ -205,72 +208,20 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 30px 20px;
-  color: #ffffff;
-  background-color: #00785a; }
-  @media (min-width: 700px) {
-    .header {
-      padding: 80px 40px;
-      padding-bottom: 40px; } }
-  @media (min-width: 1000px) {
-    .header {
-      padding: 80px 50px;
-      padding-bottom: 50px; } }
+  padding: 1.5rem 1rem;
+  color: #00785a;
+  background-color: #f5f5f5; }
 
-@media (min-width: 700px) {
-  .header--main {
-    background-image: url("./img/logo-small-white.svg");
-    background-position: bottom right -10%;
-    background-repeat: no-repeat;
-    background-size: 350px; } }
-
-@media (min-width: 1000px) {
-  .header--main {
-    background-position: bottom right -20px;
-    background-size: 380px; } }
-
-@media (min-width: 1200px) {
-  .header--main {
-    background-position: bottom right calc((100% - 860px) / 2); } }
-
-.header__wrapper {
-  margin: 0 auto;
-  max-width: 1120px;
-  width: 100%; }
-
-.header__top {
-  position: relative;
+.header__contacts {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 80px; }
+  justify-content: space-between; }
 
-.header__top--green .header__logo {
-  fill: #00785a; }
+.header__contacts-column {
+  text-align: right; }
 
-.header__top--green .header__phone,
-.header__top--green .header__email {
-  color: #00785a; }
-  @media (min-width: 700px) {
-    .header__top--green .header__phone,
-    .header__top--green .header__email {
-      color: #ffffff; } }
-
-.header__top--green .header__phone::before,
-.header__top--green .header__email::before {
-  opacity: 0; }
-  @media (min-width: 700px) {
-    .header__top--green .header__phone::before,
-    .header__top--green .header__email::before {
-      opacity: 1; } }
-
-.header__top--green .header__phone::after,
-.header__top--green .header__email::after {
-  opacity: 1; }
-  @media (min-width: 700px) {
-    .header__top--green .header__phone::after,
-    .header__top--green .header__email::after {
-      opacity: 0; } }
+.header__contacts-column:nth-child(1) {
+  margin-right: 2rem;
+  text-align: left; }
 
 .header__logo {
   position: relative;
@@ -317,100 +268,8 @@ hr {
     .header__nav {
       padding: 0 120px; } }
 
-.header__contacts {
-  position: relative;
-  z-index: 2;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 28px;
-  text-align: center; }
-  @media (min-width: 700px) {
-    .header__contacts {
-      flex-grow: 0;
-      flex-shrink: 10;
-      text-align: right; } }
-  @media (min-width: 1000px) {
-    .header__contacts {
-      font-size: 1.075rem;
-      line-height: 32px; } }
-  @media (min-width: 1200px) {
-    .header__contacts {
-      font-size: 1.125rem;
-      line-height: 34px; } }
-
-.header__phone {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 2rem;
-  min-width: 51%;
-  color: #ffffff;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: all 0.25s ease-out; }
-
-.header__phone:hover {
-  text-decoration: underline; }
-
-.header__phone::before,
-.header__phone::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 2px;
-  height: 22px;
-  width: 20px;
-  background-image: url("./img/icons/phone.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all 0.25s ease-out; }
-  @media (min-width: 1000px) {
-    .header__phone::before,
-    .header__phone::after {
-      left: -5px;
-      height: 24px;
-      width: 24px; } }
-
-.header__phone::after {
-  background-image: url("./img/icons/phone-green.svg");
-  opacity: 0; }
-
-.header__email {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 2rem;
-  min-width: 51%;
-  color: #ffffff;
-  text-align: right;
-  text-decoration: none;
-  transition: all 0.25s ease-out; }
-
-.header__email:hover {
-  text-decoration: underline; }
-
-.header__email::before,
-.header__email::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 2px;
-  height: 22px;
-  width: 20px;
-  background-image: url("./img/icons/email.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all 0.25s ease-out; }
-  @media (min-width: 1000px) {
-    .header__email::before,
-    .header__email::after {
-      left: -5px;
-      height: 24px;
-      width: 24px; } }
-
-.header__email::after {
-  background-image: url("./img/icons/email-green.svg");
-  opacity: 0; }
+.header__nav--hidden {
+  display: none; }
 
 .header__menu-button {
   position: relative;
@@ -419,43 +278,21 @@ hr {
     .header__menu-button {
       display: none; } }
 
-@media (min-width: 700px) {
-  .header__caption--main {
-    padding-top: 100px; } }
-
-@media (min-width: 1000px) {
-  .header__caption--main {
-    padding-top: 80px; } }
-
 .header__title {
   max-width: 300px;
+  color: #00785a;
   font-size: 1.5rem;
+  font-weight: 700;
   line-height: 1.5;
+  letter-spacing: 0.08em;
   text-transform: uppercase; }
-  @media (min-width: 700px) {
-    .header__title {
-      font-size: 1.75rem; } }
-  @media (min-width: 1000px) {
-    .header__title {
-      max-width: 500px;
-      font-size: 1.75rem;
-      line-height: 1.25; } }
-  @media (min-width: 1200px) {
-    .header__title {
-      font-size: 2rem;
-      max-width: 520px; } }
 
-.header__title small {
-  display: inline-block; }
-
-.header__title a {
+.header__title span {
   display: block;
-  margin-bottom: 0.5em;
-  color: #f5f5f5;
-  text-decoration: none; }
+  white-space: nowrap; }
 
-.header__title a:hover {
-  text-decoration: underline; }
+.header__title-middle {
+  font-size: 1.5em; }
 
 .menu-button {
   position: relative;
@@ -556,6 +393,23 @@ hr {
     transform: rotate(0deg); }
   100% {
     top: 20px; } }
+
+.header-contact {
+  display: block;
+  margin: 0;
+  color: #002b20;
+  font-size: 0.75rem;
+  line-height: 2;
+  text-decoration: none; }
+
+.header-contact span {
+  white-space: nowrap; }
+
+a.header-contact {
+  white-space: nowrap; }
+
+a.header-contact:hover {
+  text-decoration: underline; }
 
 .main-nav {
   position: fixed;

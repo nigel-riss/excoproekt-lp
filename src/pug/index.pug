@@ -14,11 +14,15 @@ html(lang="ru")
     body
         .wrapper
             header.header
-                .header__menu-button
-
                 .header__contacts
+                    .header__contacts-column
+                        a.header-contact(href="tel:+74012519111") +7 (4012) 519-111
+                        a.header-contact(href="tel:+74012711292") +7 (4012) 711-292
+                        a.header-contact(href="mailto:exco@list.ru") exco@list.ru
+                    .header__contacts-column
+                        p.header-contact работаем по всей России <span>пн-чт: с 9:00 до 18:00</span> <span>пт: с 9:00 до 17:00</span>
 
-                nav.header__main-nav
+                nav.header__nav.header__nav--hidden
                     .header__logo: img(src="./img/logo.jpg", alt="Логотип ЭКСКО")
 
                     ul.main-nav
@@ -37,8 +41,10 @@ html(lang="ru")
 
                     a.header__book(href="#") Консультация бесплатно
 
+                    .header__menu-button
+
                 .header__content
-                    h1.header__title 
+                    h1.header__title
                         span.header__title-top Негосударственная 
                         span.header__title-middle экспертиза
                         span.header__title-bottom проектной документации

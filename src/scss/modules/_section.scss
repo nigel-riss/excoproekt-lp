@@ -1,129 +1,83 @@
 .section {
     // box model
-    padding: 50px 20px;
+    padding: 3rem 1rem;
 
-    @include atTablet {
-        // box model
-        padding: 80px 40px;
-    }
+    // @include atTablet {
+    //     // box model
+    //     padding: 80px 40px;
+    // }
 
-    @include atDesktopS {
-        // box model
-        display: flex;
-        align-items: center;
-        min-height: 500px;
-        padding: 80px 50px;
-    }
-}
-
-.section--pb0 {
-    // box model
-    padding-bottom: 0;
-}
-
-.section--fix-h {
-    @include atDesktopM {
-        // box model
-        display: flex;
-        align-items: center;
-        min-height: 650px;
-    }
-}
-
-.section--grey {
-    // visual
-    background-color: $light;
-}
-
-.section__wrapper {
-    @include atTablet {
-        // box model
-        display: flex;
-        flex-direction: row;
-        margin: 0 auto;
-        max-width: 1120px;
-        width: 100%;
-    }
+    // @include atDesktopS {
+    //     // box model
+    //     display: flex;
+    //     align-items: center;
+    //     min-height: 500px;
+    //     padding: 80px 50px;
+    // }
 }
 
 .section__header {
     // positioning
     position: relative;
 
-    @include atTablet {
-        // box model
-        flex-basis: 50%;
-        padding-right: 40px;
-    }
+    // @include atTablet {
+    //     // box model
+    //     flex-basis: 50%;
+    //     padding-right: 40px;
+    // }
 
-    @include atDesktopS {
-        // box model
-        padding-right: 80px;
-        padding-bottom: 200px;
-    }
+    // @include atDesktopS {
+    //     // box model
+    //     padding-right: 80px;
+    //     padding-bottom: 200px;
+    // }
 
-    @include atDesktopM {
-        // box model
-        padding-right: 120px;
-    }
-}
-
-.section__subtitle {
-    // typography
-    color: $green;
-    font-size: 12px;
-    text-transform: uppercase;
-}
-
-.section__subtitle a {
-    // typography
-    color: $dark;
-    text-decoration: none;
-}
-
-.section__subtitle a:hover {
-    // typography
-    text-decoration: underline;
+    // @include atDesktopM {
+    //     // box model
+    //     padding-right: 120px;
+    // }
 }
 
 .section__title {
+    // positioning
+    position: relative;
+
     // box model
     margin: 0;
+    margin-bottom: 4rem;
 
-    // typography
-    color: $dark;
-    font-size: 1.7rem;
-    line-height: 1.5;
-    text-transform: uppercase;
-
-    @include atTablet {
-        // typography
-        font-size: 2rem;
-    }
-
-    @include atDesktopS {
-        // typography
-        font-size: 2.25rem;
-    }
-}
-
-.section__title small {
-    // box model
-    display: inline-block;
-
-    // typography
-    font-size: 0.5em;
-}
-
-.section__title span {
-    // typography
-    white-space: nowrap;
-}
-
-.section__title em {
     // typography
     color: $green;
-    font-style: normal;
+    font-size: 1.635rem;
+    font-weight: 400;
+    line-height: 1.5;
+
+    // @include atTablet {
+    //     // typography
+    //     font-size: 2rem;
+    // }
+
+    // @include atDesktopS {
+    //     // typography
+    //     font-size: 2.25rem;
+    // }
+}
+
+.section__title::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    // transform: translateX(-50%);
+
+    // box model
+    height: 1px;
+    width: 10rem;
+
+    // visual
+    background-color: $dark;
 }
 
 .section__text {

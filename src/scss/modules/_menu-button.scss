@@ -6,6 +6,10 @@
     height: 26px;
     width: 26px;
 
+    // typography
+    color: $light;
+    font-size: 0;
+
     // visual
     background-color: transparent;
     border: none;
@@ -14,7 +18,12 @@
 
 .menu-button:focus {
     // visual
-    outline: none;
+    outline-width: 0;
+
+    @include atDesktopS {
+        // visual
+        outline-width: 5px;
+    }
 }
 
 .menu-button::before,
@@ -68,18 +77,12 @@
 
 
 .menu-button--close {
-    &::before,
-    &::after {
-        // visual
-        background-color: $green;
-    }
-
     &::before {
         // animation
         animation-name: close-before;
         animation-duration: 0.5s;
         animation-iteration-count: 1;
-        animation-fill-mode: both;
+        animation-fill-mode: forwards;
     }
 
     &::after {
@@ -96,6 +99,8 @@
     }
 }
 
+
+// Menu button animations
 @keyframes close-before {
     0% {
         top: 4px;

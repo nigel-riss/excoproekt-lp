@@ -7,8 +7,6 @@
     flex-direction: column;
     justify-content: space-between;
 
-    padding: 1.5rem 1rem;
-
     // typography
     color: $green;
 
@@ -32,9 +30,14 @@
     // box model
     display: flex;
     justify-content: space-between;
+    order: 1;
+    padding: 1rem;
 }
 
 .header__contacts-column {
+    // box model
+    max-width: 200px;
+
     // typography
     text-align: right;
 }
@@ -47,8 +50,32 @@
     text-align: left;
 }
 
+.header__nav {
+    // positioning
+    position: relative;
+    z-index: 2;
 
-// here done !
+    // box model
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 0;
+    padding: 1rem;
+
+    // visual
+    background-color: $dark;
+
+    // @include atTablet {
+    //     // box model
+    //     padding: 0 30px;
+    //     flex-basis: 50%;
+    // }
+
+    // @include atDesktopS {
+    //     // box model
+    //     padding: 0 120px;
+    // }
+}
 
 
 .header__logo {
@@ -58,47 +85,26 @@
     // box model
     display: block;
     flex-shrink: 0;
-    width: 46px;
+    width: 64px;
 
     // visual
     fill: $white;
     transition: all 0.25s ease-out;
 
-    @include atTablet {
-        // box model
-        width: 120px;
-    }
+    // @include atTablet {
+    //     // box model
+    //     width: 120px;
+    // }
 
-    @include atDesktopS {
-        // box model
-        width: 160px;
-    }
+    // @include atDesktopS {
+    //     // box model
+    //     width: 160px;
+    // }
 
-    @include atDesktopM {
-        // box model
-        width: 172px;
-    }
-}
-
-.header__logo--full {
-    // box model
-    display: none;
-
-    @include atTablet {
-        // box model
-        display: block;
-        width: 100%;
-    }
-}
-
-.header__logo--small {
-    // box model
-    width: 100%;
-
-    @include atTablet {
-        // box model
-        display: none;
-    }
+    // @include atDesktopM {
+    //     // box model
+    //     width: 172px;
+    // }
 }
 
 .header__logo svg {
@@ -106,51 +112,42 @@
     width: 100%;
 }
 
-.header__nav {
-    // positioning
-    position: relative;
-    z-index: 2;
-
-    @include atTablet {
-        // box model
-        padding: 0 30px;
-        flex-basis: 50%;
-    }
-
-    @include atDesktopS {
-        // box model
-        padding: 0 120px;
-    }
-}
-
-.header__nav--hidden {
-    // box model
-    display: none;
-}
-
-
-
 .header__menu-button {
     // positioning
     position: relative;
     z-index: 3;
 
-    @include atTablet {
+    @include atDesktopS {
         // box model
         display: none;
     }
 }
 
-.header__title {
+.header__content {
     // box model
-    max-width: 300px;
+    order: 2;
+    padding: 4rem 1rem;
+
+    // typography
+    text-align: center;
+}
+
+.header__title {
+    // positioning
+    position: relative;
+
+    // box model
+    display: block;
+    margin: 0;
+    margin-bottom: 4rem;
 
     // typography
     color: $green;
-    font-size: 1.5rem;
+    font-size: 6vw;
     font-weight: 700;
-    line-height: 1.5;
     letter-spacing: 0.08em;
+    line-height: 1.5;
+    text-align: center;
     text-transform: uppercase;
 
     // @include atTablet {
@@ -174,23 +171,49 @@
     // }
 }
 
+.header__title::after {
+    content: "";
+
+    // positioning
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    // box model
+    height: 1px;
+    width: 10rem;
+
+    // visual
+    background-color: $dark;
+}
+
 .header__title span {
     // box model
     display: block;
 
     // typography
+    line-height: 1.125;
     white-space: nowrap;
 }
 
 .header__title-top {
-
+    // typography
+    font-size: 0.95em;
 }
 
 .header__title-middle {
     // typography
-    font-size: 1.5em;
+    font-size: 1.73em;
 }
 
 .header__title-bottom {
+    // typography
+    font-size: 0.71em;
+}
 
+.header__text {
+    // typography
+    color: $dark;
+    line-height: 1.5;
 }

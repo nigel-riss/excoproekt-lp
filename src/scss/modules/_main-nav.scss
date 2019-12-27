@@ -1,6 +1,6 @@
 .main-nav {
     // positioning
-    position: fixed;
+    position: absolute;
     bottom: -100px;
     top: -100px;
     right: 0;
@@ -14,28 +14,28 @@
     width: 100%;
 
     // visual
-    background-color: $white;
     transition: all 0.25s ease-in-out;
+    display: none;
 
-    @include atTablet {
-        // positioning
-        position: relative;
-        bottom: auto;
-        top: auto;
-        right: auto;
+    // @include atTablet {
+    //     // positioning
+    //     position: relative;
+    //     bottom: auto;
+    //     top: auto;
+    //     right: auto;
 
-        // box model
-        flex-direction: row;
-        justify-content: flex-start;
-        // border: 2px dashed fuchsia;
-        width: 100%;
+    //     // box model
+    //     flex-direction: row;
+    //     justify-content: flex-start;
+    //     // border: 2px dashed fuchsia;
+    //     width: 100%;
 
-        // visual
-        background-color: transparent;
+    //     // visual
+    //     background-color: transparent;
 
-        // list
-        list-style: none;
-    }
+    //     // list
+    //     list-style: none;
+    // }
 }
 
 .main-nav--hidden {
@@ -108,4 +108,8 @@
 
     // visual
     background-color: $light;
+}
+
+.main-nav__book {
+
 }

@@ -297,6 +297,7 @@ hr {
   font-size: 0.71em; }
 
 .header__text {
+  margin-bottom: 3rem;
   color: #494949;
   line-height: 1.5; }
 
@@ -711,27 +712,22 @@ p.ctc-form__note {
 .ctc-form__application:hover {
   text-decoration: underline; }
 
-.more-button {
-  padding-left: 20px;
-  padding-right: 32px;
+.button {
+  display: inline-block;
+  padding: 1.125rem 2rem;
   color: #ffffff;
-  font-size: 12px;
-  line-height: 30px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-decoration: none;
-  background-color: #00785a;
-  background-image: url("./img/icons/arrow-right.svg");
-  background-size: 16px;
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  cursor: pointer;
-  transition: all 0.25s ease-out;
+  text-transform: uppercase;
   border: 1px solid #00785a;
-  border-radius: 16px; }
+  background-color: #00785a;
+  border-radius: 4px;
+  transition: all 0.25s ease-out; }
 
-.more-button:hover {
+.button:hover {
   color: #00785a;
-  background-color: transparent;
-  background-image: url("./img/icons/arrow-right-green.svg"); }
+  background-color: #ffffff; }
 
 .client {
   flex-basis: 40%;

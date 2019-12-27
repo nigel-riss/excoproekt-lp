@@ -213,6 +213,9 @@
 }
 
 .header__text {
+    // box model
+    margin-bottom: 3rem;
+
     // typography
     color: $dark;
     line-height: 1.5;

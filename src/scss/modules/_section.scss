@@ -20,11 +20,6 @@
 
 }
 
-.section--cert img {
-    // box model
-    width: 100%;
-}
-
 .section--free-cons {
     // visual
     background-color: $grey;
@@ -51,6 +46,9 @@
 .section__header {
     // positioning
     position: relative;
+
+    // box model
+    margin-bottom: 5rem;
 
     // @include atTablet {
     //     // box model
@@ -110,4 +108,9 @@
 
     // visual
     background-color: $dark;
+}
+
+.section__cert img {
+    // box model
+    width: 100%;
 }

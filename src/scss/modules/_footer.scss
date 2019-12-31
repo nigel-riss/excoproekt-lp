@@ -1,153 +1,61 @@
 .footer {
     // box model
-    padding: 50px 20px;
-    padding-top: 400px;
+    padding: 3rem 1.5rem;
+
+    // typography
+    text-align: center;
 
     // visual
     background-color: $green;
 
-    @include atTablet {
-        // box model
-        padding: 110px 40px;
-        padding-bottom: 40px;
-    }
+    // @include atTablet {
+    //     // box model
+    //     padding: 110px 40px;
+    //     padding-bottom: 40px;
+    // }
 
-    @include atDesktopS {
-        // box model
-        padding: 110px 50px;
-        padding-bottom: 80px;
-    }
+    // @include atDesktopS {
+    //     // box model
+    //     padding: 110px 50px;
+    //     padding-bottom: 80px;
+    // }
 }
 
-.footer__wrapper {
-    // box model
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 1120px;
+.footer__top {
 
-    @include atTablet {
-        // box model
-        flex-direction: row;
-    }
-}
-
-.footer__legals {
-    // box model
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    order: 3;
-
-    @include atTablet {
-        // box model
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        order: 1;
-        padding: 7px 0;
-        padding-right: 40px;
-    }
-
-    @include atDesktopS {
-        padding-bottom: 0;
-    }
 }
 
 .footer__logo {
     // box model
-    width: 60px;
+    display: inline-block;
+    width: 12rem;
 
     // visual
     fill: $white;
 }
 
-.footer__logo-s {
-    // box model
-    width: 100%;
+.footer__menu {
+
 }
 
-.footer__logo-l {
-    // box model
-    display: none;
+
+.footer__legals {
+
 }
 
-.footer__copy {
-    // typography
-    color: $black;
-    line-height: 1.75;
+.footer__bottom {
 
-    @include atDesktopS {
-        // box model
-        margin-bottom: 7px;
-    }
 }
 
-.footer__navigation {
-    // box model
-    order: 1;
+.footer__phones {
 
-    @include atTablet {
-        // box model
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        order: 2;
-        padding-right: 40px;
-    }
-
-    @include atDesktopS {
-        // box model
-        flex-direction: row;
-        padding-right: 0;
-    }
 }
 
-.footer__nav {
-    // box model
-    margin-bottom: 30px;
+.footer__phones a {
 
-    @include atTablet {
-        // box model
-        margin-bottom: 0;
-    }
-
-    @include atDesktopS {
-        // box model
-        padding-right: 40px;
-    }
 }
 
-.footer__title {
-    // box model
-    display: none;
+.footer__phones a:hover {
+
 }
 
-.footer__contacts {
-    // box model
-    margin-bottom: 30px;
-    order: 2;
-
-    @include atTablet {
-        // box model
-        margin-top: -0.75rem;
-    }
-}
-
-.footer__contacts p {
-    // typography
-    color: $white;
-    line-height: 1.75;
-}
-
-.footer__contacts a {
-    // typography
-    color: $white;
-    text-decoration: none;
-}
-
-.footer__contacts a:hover {
-    // typography
-    text-decoration: underline;
-}

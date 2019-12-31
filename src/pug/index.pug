@@ -136,16 +136,16 @@ html(lang="ru")
                     .section__contacts
                         article.contact
                             h3.contact__title Телефоны
-                            p.contact__text +7 (4012) 519-111 +7 (4012) 771-292
+                            p.contact__text <a href="tel:+74012519111">+7 (4012) 519-111</a> <br><a href="tel:+74012771292">+7 (4012) 771-292</a>
                         article.contact
                             h3.contact__title E-mail
-                            p.contact__text exco@list.ru
+                            p.contact__text <a href="mailto:exco@list.ru">exco@list.ru</a>
                         article.contact
                             h3.contact__title Адрес
-                            p.contact__text 236040, г.Калининград, ул.Университетская,2Г (б/ц “Юбилейный”) офис 309
+                            p.contact__text 236040, г.Калининград, <br>ул.Университетская,2Г <br>БЦ «Юбилейный», офис 309
                         article.contact
                             h3.contact__title Время работы
-                            p.contact__text пн-чт: с 9-00 до 18-00 пт: с 9-00 до 17-00 обед: с 13-00 до 14-00
+                            p.contact__text пн-чт: с 9-00 до 18-00 <br>пт: с 9-00 до 17-00 <br>обед: с 13-00 до 14-00
                         article.contact
                             h3.contact__title ИНН
                             p.contact__text 3906145890
@@ -157,13 +157,19 @@ html(lang="ru")
             footer.footer
                 .footer__top
                     .footer__logo
-                        img(src="", alt="")
+                        img(src="./img/logo-full-white.svg", alt="Логотип ЭКСКО")
                     nav.footer__menu
-                        ul.footer-menu
-                            li.footer-menu__item
-                    .footer__legals
+                        ul.footer-nav
+                            li.footer-nav__item: a(href="#") Главная
+                            li.footer-nav__item: a(href="#") Аккредитация
+                            li.footer-nav__item: a(href="#") Заявителю
+                            li.footer-nav__item: a(href="#") Заявка на экспертизу
+                            li.footer-nav__item: a(href="#") Зксперты
+                            li.footer-nav__item: a(href="#") Контакты
+                    p.footer__legals &copy; ЭКСКО 2018 — 2020
 
                 .footer__bottom
-                    
+                    a.button(href="#") Бесплатная консультация
+                    p.footer__phones <a href="tel:+74012519111">+7 (4012) 519-111</a> <br><a href="tel:+74012771292">+7 (4012) 771-292</a>
 
         script(src="scripts.js")

@@ -22,16 +22,7 @@
     text-decoration: none;
 }
 
-.footer-nav__link:hover {
+.footer-nav__item a:hover {
     // typography
     text-decoration: underline;
-}
-
-.footer-nav__link--main {
-    // box model
-    display: block;
-    margin-bottom: 20px;
-
-    // typography
-    font-weight: 700;
 }

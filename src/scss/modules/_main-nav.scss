@@ -1,21 +1,26 @@
 .main-nav {
     // positioning
     position: absolute;
-    bottom: -100px;
-    top: -100px;
+    top: 0px;
     right: 0;
+    left: 0;
+    z-index: 2;
 
     // box model
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin: 0;
-    padding: 0;
+    padding: 1.25rem;
+    padding-top: 4rem;
     width: 100%;
 
     // visual
     transition: all 0.25s ease-in-out;
-    display: none;
+    background-color: $dark;
+    // display: none;
+
+    // list    
+    list-style: none;
 
     // @include atTablet {
     //     // positioning
@@ -33,28 +38,27 @@
     //     // visual
     //     background-color: transparent;
 
-    //     // list
-    //     list-style: none;
+    //    
     // }
 }
 
 .main-nav--hidden {
     // positioning
-    right: -110%;
+    // right: -110%;
 
-    @include atTablet {
-        // positioning
-        right: auto;
-    }
+//     @include atTablet {
+//         // positioning
+//         right: auto;
+//     }
 }
 
 .main-nav__item {
     // box model
-    margin: 5px;
-    padding: 10px 0px;
+    margin: 0.25rem;
+    padding: 0.5rem 0;
 
     // typography
-    text-align: center;
+    text-align: left;
 
     @include atTablet {
         // box model
@@ -74,9 +78,12 @@
     position: relative;
 
     // typography
-    color: $green;
-    font-size: 1.25rem;
+    color: $light;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
     text-decoration: none;
+    text-transform: uppercase;
 
     @include atTablet {
         // typography

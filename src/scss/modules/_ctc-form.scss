@@ -4,44 +4,42 @@
     z-index: 2;
 
     // box model
-    padding: 30px 25px;
+    padding: 2rem 1.5rem;
 
     // visual
     background-color: $white;
 }
 
-.ctc-form__fieldset {
-    // box model
-    margin: 0;
-    padding: 0;
-
-    // border
-    border: none;
-}
-
 .ctc-form__input {
     // box model
     display: block;
-    margin-bottom: 15px;
-    padding: 15px 0;
+    margin-bottom: 1rem;
+    padding: 1rem 0.5rem;
     width: 100%;
 
     // border
     border: none;
     border-bottom: 1px solid $dark;
+}
+
+.ctc-form__input:focus {
+    // box model
+    border-bottom: 1px solid $green;
 }
 
 .ctc-form__text {
     // box model
     display: block;
-    margin-bottom: 30px;
-    padding: 15px 0;
+    margin-bottom: 2rem;
+    padding: 1rem 0.5rem;
     width: 100%;
 
     // border
     border: none;
     border-bottom: 1px solid $dark;
 }
+
+// to here
 
 .ctc-form__button {
     // box model

@@ -436,6 +436,10 @@ a.header-contact:hover {
   background-color: #494949;
   list-style: none; }
 
+.main-nav--hidden {
+  top: -400px;
+  opacity: 0; }
+
 .main-nav__item {
   margin: 0.25rem;
   padding: 0.5rem 0;
@@ -451,6 +455,7 @@ a.header-contact:hover {
 
 .main-nav__item a {
   position: relative;
+  display: inline-block;
   color: #f5f5f5;
   font-size: 0.875rem;
   font-weight: 700;
@@ -475,6 +480,20 @@ a.header-contact:hover {
 .main-nav__item a:hover::after {
   width: 100%;
   background-color: #f5f5f5; }
+
+.main-nav__book {
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+  border: 1px solid #00785a;
+  border-radius: 4px;
+  background-color: #00785a;
+  transition: all 0.25s ease-out; }
+
+.main-nav__book:hover {
+  background-color: transparent; }
+
+.main-nav__book::after {
+  display: none; }
 
 .section {
   padding: 3rem 1.5rem; }

@@ -44,12 +44,10 @@
 
 .main-nav--hidden {
     // positioning
-    // right: -110%;
+    top: -400px;
 
-//     @include atTablet {
-//         // positioning
-//         right: auto;
-//     }
+    // visual
+    opacity: 0;
 }
 
 .main-nav__item {
@@ -76,6 +74,9 @@
 .main-nav__item a {
     // positioning
     position: relative;
+
+    // box model
+    display: inline-block;
 
     // typography
     color: $light;
@@ -118,5 +119,25 @@
 }
 
 .main-nav__book {
+    // box model
+    padding: 0.5rem;
+    margin-left: -0.5rem;
 
+    // border
+    border: 1px solid $green;
+    border-radius: 4px;
+
+    // visual
+    background-color: $green;
+    transition: all 0.25s ease-out;
+}
+
+.main-nav__book:hover {
+    // visual
+    background-color: transparent;
+}
+
+.main-nav__book::after {
+    // box model
+    display: none;
 }

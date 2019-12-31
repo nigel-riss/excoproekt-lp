@@ -1,56 +1,39 @@
-.client {
+.expert {
     // box model
-    flex-basis: 40%;
-    margin-bottom: 20px;
-
-    @include atDesktopS {
-        // box model
-        flex-basis: 33%;
-    }
+    margin-bottom: 3rem;
 }
 
-.client__logo {
+.expert__name {
     // box model
-    height: 100px;
-    width: 100%;
-    padding: 5px;
+    margin: 0;
+    margin-bottom: 1rem;
 
     // typography
-    text-align: center;
-
-    @include atTablet {
-        // box model
-        height: 125px;
-    }
+    font-weight: 700;
 }
 
-.client__logo img {
+.expert__profi {
     // box model
-    height: 100%;
-    object-position: center;
-}
-
-.client__title {
-    // box model
-    padding: 0 5px;
+    margin: 0;
 
     // typography
-    color: $greyText;
-    font-size: 0.75rem;
     line-height: 1.5;
-    text-align: center;
+}
 
-    @include atTablet {
-        // typography
-        font-size: 0.875rem;
-    }
+.expert__skill {
+    // box model
+    margin: 0;
 
-    @include atDesktopS {
-        // box model
-        padding: 0 10px;
+    // typography
+    color: $dark;
+    font-weight: 700;
+    line-height: 1.5;
+}
 
-        // typography
-        font-size: 1rem;
-        font-weight: 400;
-    }
+.expert__attestat {
+    // box model
+    margin: 0;
+
+    // typography
+    line-height: 1.5;
 }

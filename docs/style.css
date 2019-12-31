@@ -608,40 +608,27 @@ p.ctc-form__note {
   color: #00785a;
   background-color: #ffffff; }
 
-.client {
-  flex-basis: 40%;
-  margin-bottom: 20px; }
-  @media (min-width: 1000px) {
-    .client {
-      flex-basis: 33%; } }
+.expert {
+  margin-bottom: 3rem; }
 
-.client__logo {
-  height: 100px;
-  width: 100%;
-  padding: 5px;
-  text-align: center; }
-  @media (min-width: 700px) {
-    .client__logo {
-      height: 125px; } }
+.expert__name {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-weight: 700; }
 
-.client__logo img {
-  height: 100%;
-  object-position: center; }
+.expert__profi {
+  margin: 0;
+  line-height: 1.5; }
 
-.client__title {
-  padding: 0 5px;
-  color: #757575;
-  font-size: 0.75rem;
-  line-height: 1.5;
-  text-align: center; }
-  @media (min-width: 700px) {
-    .client__title {
-      font-size: 0.875rem; } }
-  @media (min-width: 1000px) {
-    .client__title {
-      padding: 0 10px;
-      font-size: 1rem;
-      font-weight: 400; } }
+.expert__skill {
+  margin: 0;
+  color: #494949;
+  font-weight: 700;
+  line-height: 1.5; }
+
+.expert__attestat {
+  margin: 0;
+  line-height: 1.5; }
 
 .contacts {
   position: relative;

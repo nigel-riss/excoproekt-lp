@@ -5,6 +5,7 @@
 
     // typography
     color: $white;
+    font-size: 0.875rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-decoration: none;
@@ -16,6 +17,7 @@
     // visual
     background-color: $green;
     border-radius: 4px;
+    cursor: pointer;
     transition: all 0.25s ease-out;
 }
 

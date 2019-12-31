@@ -58,10 +58,10 @@ html(lang="ru")
                     h2.section__title Проводим экспертизу на&nbsp;законных основаниях!
                 .section__content
                     h3.title-3 наша аккредитация
-                    p.section-text ООО «ЭКСКО» аккредитовано в соответствии с Федеральным законом от 28.12.2013г. N 412-ФЗ «Об аккредитации в национальной системе аккредитации»
+                    p.section-text ООО «ЭКСКО» <a href="https://pub.fsa.gov.ru/rene/541/person">аккредитовано</a> в соответствии с Федеральным законом от 28.12.2013г. N 412-ФЗ «Об аккредитации в национальной системе аккредитации»
                     h3.title-3 регламент услуги
                     p.section-text Работы проводятся в строгом соответствии с регламентом организации, утвержденным 27.01.2018г.
-                .section__cert: img(src="", alt="")
+                .section__cert: img(src="./img/accreditation-2--full.jpg", alt="")
 
             section.section.section--free-cons
                 header.section__header
@@ -69,6 +69,9 @@ html(lang="ru")
                 .section__content
                     h3.title-3 заполните форму и мы перезвоним вам
                     form.ctc-form(action="")
+                        input.ctc-form__input(type="text" placeholder="Ваше имя:*" size="1")
+                        input.ctc-form__input(type="text" placeholder="Ваш контактный телефон:*" size="1")
+                        input.button(type="submit", value="Заказать консультацию")
 
             section.section.section--docs
                 header.section__header
@@ -86,6 +89,10 @@ html(lang="ru")
                 .section__content
                     h3.title-3 оставьте заявку и мы свяжемся с вами
                     form.ctc-form(action="")
+                        input.ctc-form__input(type="text" placeholder="Ваше имя:*" size="1")
+                        input.ctc-form__input(type="text" placeholder="Ваш контактный телефон:*" size="1")
+                        textarea.ctc-form__text(name="", cols="10", rows="6" placeholder="Сообщение" size="1")
+                        input.button(type="submit", value="Заказать консультацию")
 
             section.section.section--experts
                 header.section__header

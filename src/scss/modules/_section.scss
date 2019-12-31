@@ -20,6 +20,11 @@
 
 }
 
+.section--cert img {
+    // box model
+    width: 100%;
+}
+
 .section--free-cons {
     // visual
     background-color: $grey;

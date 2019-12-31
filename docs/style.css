@@ -480,6 +480,9 @@ a.header-contact:hover {
 .section {
   padding: 3rem 1rem; }
 
+.section--cert img {
+  width: 100%; }
+
 .section--free-cons {
   background-color: #eeeeee; }
 
@@ -511,7 +514,7 @@ a.header-contact:hover {
   background-color: #494949; }
 
 .title-3 {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   color: #494949;
   font-size: 1.325rem;
   font-weight: 400;
@@ -521,6 +524,9 @@ a.header-contact:hover {
   color: #494949;
   font-size: 1rem;
   line-height: 1.5; }
+
+.section-text a {
+  color: #00785a; }
 
 .ctc-form {
   position: relative;
@@ -584,6 +590,7 @@ p.ctc-form__note {
   display: inline-block;
   padding: 1.125rem 2rem;
   color: #ffffff;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-decoration: none;
@@ -591,6 +598,7 @@ p.ctc-form__note {
   border: 1px solid #00785a;
   background-color: #00785a;
   border-radius: 4px;
+  cursor: pointer;
   transition: all 0.25s ease-out; }
 
 .button:hover {

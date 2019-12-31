@@ -215,7 +215,7 @@ hr {
   display: flex;
   justify-content: space-between;
   order: 1;
-  padding: 1rem; }
+  padding: 1rem 1.5rem; }
 
 .header__contacts-column {
   max-width: 200px;
@@ -232,7 +232,7 @@ hr {
   justify-content: space-between;
   align-items: center;
   order: 0;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #494949; }
 
 .header__logo {
@@ -478,7 +478,7 @@ a.header-contact:hover {
   background-color: #f5f5f5; }
 
 .section {
-  padding: 3rem 1rem; }
+  padding: 3rem 1.5rem; }
 
 .section--cert img {
   width: 100%; }
@@ -500,7 +500,7 @@ a.header-contact:hover {
   margin: 0;
   margin-bottom: 4rem;
   color: #00785a;
-  font-size: 1.635rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5; }
 
@@ -590,7 +590,7 @@ p.ctc-form__note {
   display: inline-block;
   padding: 1.125rem 2rem;
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-decoration: none;
@@ -600,6 +600,9 @@ p.ctc-form__note {
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.25s ease-out; }
+
+.button--header {
+  font-size: 0.875rem; }
 
 .button:hover {
   color: #00785a;

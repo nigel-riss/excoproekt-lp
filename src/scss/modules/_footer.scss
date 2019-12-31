@@ -6,7 +6,7 @@
     text-align: center;
 
     // visual
-    background-color: $green;
+    background-color: $dark;
 
     // @include atTablet {
     //     // box model
@@ -29,18 +29,24 @@
     // box model
     display: inline-block;
     width: 12rem;
+    margin-bottom: 2rem;
 
     // visual
     fill: $white;
 }
 
 .footer__menu {
-
+    // box model
+    margin-bottom: 4rem;
 }
 
 
 .footer__legals {
+    // box model
+    margin-bottom: 2rem;
 
+    // typography
+    color: $light;
 }
 
 .footer__bottom {
@@ -48,14 +54,21 @@
 }
 
 .footer__phones {
-
+    // box model
+    margin-bottom: 3rem;
 }
 
 .footer__phones a {
-
+    // typography
+    color: $light;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 2;
+    text-decoration: none;
 }
 
 .footer__phones a:hover {
-
+    // typography
+    text-decoration: underline;
 }
 

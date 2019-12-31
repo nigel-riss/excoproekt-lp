@@ -2,12 +2,6 @@
     // box model
     margin: 0;
     padding: 0;
-}
-
-.footer-nav__list {
-    // box model
-    margin: 0;
-    padding: 0;
 
     // list
     list-style: none;
@@ -18,10 +12,13 @@
     margin: 5px 0;
 }
 
-.footer-nav__link {
+.footer-nav__item a {
     // typography
-    color: $black;
+    color: $light;
+    font-weight: 700;
     line-height: 1.75;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     text-decoration: none;
 }
 

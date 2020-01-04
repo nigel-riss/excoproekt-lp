@@ -8,11 +8,13 @@
     // visual
     background-color: $dark;
 
-    // @include atTablet {
-    //     // box model
-    //     padding: 110px 40px;
-    //     padding-bottom: 40px;
-    // }
+    @include atTablet {
+        // box model
+        padding: 3rem 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
 
     // @include atDesktopS {
     //     // box model
@@ -38,6 +40,11 @@
 .footer__menu {
     // box model
     margin-bottom: 4rem;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 0;
+    }
 }
 
 
@@ -47,6 +54,11 @@
 
     // typography
     color: $light;
+
+    @include atTablet {
+        // box model
+        margin-bottom: 1rem;
+    }
 }
 
 .footer__bottom {

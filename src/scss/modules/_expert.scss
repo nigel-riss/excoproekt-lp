@@ -1,6 +1,16 @@
 .expert {
     // box model
     margin-bottom: 3rem;
+
+    @include atTablet {
+        // box model
+        flex-basis: 45%;
+    }
+
+    @include atDesktopS {
+        // box model
+        // flex-basis: 33%;
+    }
 }
 
 .expert__name {

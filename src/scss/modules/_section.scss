@@ -105,7 +105,33 @@
 }
 
 .section--experts {
+    @include atDesktopS {
+        // positioning
+        position: relative;
 
+        // box model
+        padding-right: 33%;
+
+        // visual
+        background-image: url('./img/bgs/experts.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    .section__content {
+        @include atTablet {
+            // box model
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        @include atDesktopS {
+            // box model
+            justify-content: space-between;
+        }
+    }
 }
 
 .section--contacts {
@@ -146,6 +172,9 @@
     @include atDesktopS {
         // box model
         padding-right: 0;
+
+        // typography
+        font-size: 2.5rem;
     }
 }
 

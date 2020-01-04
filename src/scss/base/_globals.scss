@@ -35,7 +35,7 @@ body {
 .wrapper {
     @include atDesktopM {
         // box model
-        max-width: 1200px;
+        max-width: 1280px;
         margin: 0 auto;
 
         // visual

@@ -1,7 +1,7 @@
 .main-nav {
     // positioning
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
     left: 0;
     z-index: 2;
@@ -22,24 +22,19 @@
     // list    
     list-style: none;
 
-    // @include atTablet {
-    //     // positioning
-    //     position: relative;
-    //     bottom: auto;
-    //     top: auto;
-    //     right: auto;
+    @include atDesktopS {
+        // positioning
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
 
-    //     // box model
-    //     flex-direction: row;
-    //     justify-content: flex-start;
-    //     // border: 2px dashed fuchsia;
-    //     width: 100%;
-
-    //     // visual
-    //     background-color: transparent;
-
-    //    
-    // }
+        // box model
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        padding: 0.5rem;
+    }
 }
 
 .main-nav--hidden {
@@ -48,6 +43,14 @@
 
     // visual
     opacity: 0;
+
+    @include atDesktopS {
+        // positioning
+        top: 0;
+
+        // visual
+        opacity: 1;
+    }
 }
 
 .main-nav__item {
@@ -67,7 +70,8 @@
 
     @include atDesktopS {
         // box model
-        padding: 10px 25px;
+        padding: 0;
+        margin-right: 1rem;
     }
 }
 
@@ -90,6 +94,15 @@
         // typography
         color: $white;
         font-size: 1rem;
+    }
+
+    @include atDesktopS {
+        // box model
+        padding: 0.25rem;
+
+        // typography
+        font-size: 0.675rem;
+        white-space: nowrap;
     }
 }
 
@@ -118,7 +131,7 @@
     background-color: $light;
 }
 
-.main-nav__book {
+a.main-nav__book {
     // box model
     padding: 0.5rem;
     margin-left: -0.5rem;
@@ -130,6 +143,15 @@
     // visual
     background-color: $green;
     transition: all 0.25s ease-out;
+
+    @include atDesktopS {
+        // box model
+        margin-left: 0;
+        padding: 1rem;
+
+        // typography
+        text-align: center;
+    }
 }
 
 .main-nav__book:hover {

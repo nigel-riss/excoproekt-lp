@@ -8,19 +8,6 @@ html {
         // typography
         font-size: 14px;
     }
-
-    @include atTablet {
-
-    }
-
-    @include atDesktopS {
-        
-    }
-
-    @include atDesktopM {
-        // typography
-        font-size: 15px;
-    }
 }
 
 // Box sizing fix

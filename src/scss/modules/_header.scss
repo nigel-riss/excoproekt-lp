@@ -12,26 +12,33 @@
 
     // visual
     background-color: $light;
-
-    // @include atTablet {
-    //     // box model
-    //     padding: 80px 40px;
-    //     padding-bottom: 40px;
-    // }
-
-    // @include atDesktopS {
-    //     // box model
-    //     padding: 80px 50px;
-    //     padding-bottom: 50px;
-    // }
 }
 
 .header__contacts {
+    // positioning
+    position: relative;
+    z-index: 2;
+
     // box model
     display: flex;
     justify-content: space-between;
     order: 1;
     padding: 1rem 1.5rem;
+
+    // visual
+    background-color: rgba($light, 0.5);
+
+    @include atDesktopS {
+        // box model
+        padding: 1rem 3rem;
+        padding-right: 4rem;
+        order: 0;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 1rem 5rem;
+    }
 }
 
 .header__contacts-column {
@@ -40,6 +47,11 @@
 
     // typography
     text-align: right;
+
+    @include atDesktopS {
+        // box model
+        max-width: inherit;
+    }
 }
 
 .header__contacts-column:nth-child(1) {
@@ -65,16 +77,16 @@
     // visual
     background-color: $dark;
 
-    // @include atTablet {
-    //     // box model
-    //     padding: 0 30px;
-    //     flex-basis: 50%;
-    // }
+    @include atDesktopS {
+        // box model
+        padding: 1rem 3rem;
+    }
 
-    // @include atDesktopS {
-    //     // box model
-    //     padding: 0 120px;
-    // }
+    @include atDesktopM {
+        // box model
+        padding: 1rem 5rem;
+        padding-right: 4rem;
+    }
 }
 
 
@@ -91,15 +103,15 @@
     fill: $white;
     transition: all 0.25s ease-out;
 
-    // @include atTablet {
-    //     // box model
-    //     width: 120px;
-    // }
+    @include atTablet {
+        // box model
+        width: 92px;
+    }
 
-    // @include atDesktopS {
-    //     // box model
-    //     width: 160px;
-    // }
+    @include atDesktopS {
+        // box model
+        width: 112px;
+    }
 
     // @include atDesktopM {
     //     // box model
@@ -130,6 +142,35 @@
 
     // typography
     text-align: center;
+
+    @include atTablet {
+        // box model
+        margin-top: -7rem;
+        padding-top: 10rem;
+        padding-right: 2rem;
+        padding-left: 50%;
+
+        // typography
+        text-align: right;
+
+        // visual
+        background-image: url('./img/bgs/header.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    @include atDesktopS {
+        // box model
+        margin-top: 0;
+        padding: 4rem;
+        padding-left: 50%;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 5rem;
+        padding-left: 50%;
+    }
 }
 
 .header__title {
@@ -150,10 +191,11 @@
     text-align: center;
     text-transform: uppercase;
 
-    // @include atTablet {
-    //     // typography
-    //     font-size: 1.75rem;
-    // }
+    @include atTablet {
+        // typography
+        font-size: 3.25vw;
+        text-align: right;
+    }
 
     // @include atDesktopS {
     //     // box model
@@ -186,6 +228,13 @@
 
     // visual
     background-color: $dark;
+
+    @include atTablet {
+        // positioning
+        transform: none;
+        left: auto;
+        right: 0.25rem;
+    }
 }
 
 .header__title span {
@@ -219,4 +268,9 @@
     // typography
     color: $dark;
     line-height: 1.5;
+
+    @include atTablet {
+        // box model
+        padding-left: 2rem;
+    }
 }

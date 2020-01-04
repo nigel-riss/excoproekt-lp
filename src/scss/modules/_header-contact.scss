@@ -8,6 +8,15 @@
   font-size: 0.75rem;
   line-height: 2;
   text-decoration: none;
+
+  @include atDesktopS {
+    // box model
+    display: inline-block;
+
+    // typography
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
 }
 
 .header-contact span {
@@ -18,6 +27,11 @@
 a.header-contact {
   // typography
   white-space: nowrap;
+
+  @include atDesktopS {
+    // box model
+    margin-right: 1.25rem;
+  }
 }
 
 a.header-contact:hover {

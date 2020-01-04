@@ -628,6 +628,10 @@ a.main-nav__book {
       background-image: url("./img/bgs/cons.jpg");
       background-size: cover;
       background-position: center left; } }
+  @media (min-width: 1000px) {
+    .section--free-cons .section__title::after {
+      left: auto;
+      right: 0; } }
 
 @media (min-width: 1000px) {
   .section--docs {
@@ -648,6 +652,10 @@ a.main-nav__book {
       background-image: url("./img/bgs/request.jpg");
       background-size: cover;
       background-position: center left; } }
+  @media (min-width: 1000px) {
+    .section--request .section__title::after {
+      left: auto;
+      right: 0; } }
 
 .section--contacts {
   background-color: #eeeeee; }
@@ -666,7 +674,11 @@ a.main-nav__book {
   line-height: 1.5; }
   @media (min-width: 700px) {
     .section__title {
+      padding-right: 40%;
       font-size: 2rem; } }
+  @media (min-width: 1000px) {
+    .section__title {
+      padding-right: 0; } }
 
 .section__title::after {
   content: "";
@@ -678,10 +690,13 @@ a.main-nav__book {
   background-color: #494949; }
 
 .section__cert {
-  padding-top: 1rem;
+  margin-top: 2rem;
+  padding: 0.25rem;
+  padding-top: 0.5rem;
   font-size: 0;
   background-color: #ffffff;
-  box-shadow: 0 0 2px rgba(73, 73, 73, 0.5); }
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(73, 73, 73, 0.5); }
   @media (min-width: 1000px) {
     .section__cert {
       position: absolute;
@@ -715,8 +730,19 @@ a.main-nav__book {
 .ctc-form {
   position: relative;
   z-index: 2;
+  margin: 0 auto;
+  max-width: 400px;
   padding: 2rem 1.5rem;
-  background-color: #ffffff; }
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 0 2px rgba(73, 73, 73, 0.5); }
+  @media (min-width: 1000px) {
+    .ctc-form {
+      margin-top: 2rem;
+      max-width: inherit;
+      padding: 3rem 2rem;
+      background-color: rgba(255, 255, 255, 0.75); } }
 
 .ctc-form__input {
   display: block;
@@ -724,7 +750,8 @@ a.main-nav__book {
   padding: 1rem 0.5rem;
   width: 100%;
   border: none;
-  border-bottom: 1px solid #494949; }
+  border-bottom: 1px solid #494949;
+  background-color: transparent; }
 
 .ctc-form__input:focus {
   border-bottom: 1px solid #00785a; }
@@ -734,42 +761,13 @@ a.main-nav__book {
   margin-bottom: 2rem;
   padding: 1rem 0.5rem;
   width: 100%;
+  background-color: transparent;
   border: none;
   border-bottom: 1px solid #494949; }
 
-.ctc-form__button {
-  display: block;
-  margin-bottom: 30px;
-  padding: 15px 0;
-  width: 100%;
-  color: #ffffff;
-  background-color: #00785a;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px; }
-
-.ctc-form__button:hover {
-  opacity: 0.75; }
-
-p.ctc-form__note {
-  margin: 0;
-  margin-bottom: 25px;
-  font-size: 0.75rem;
-  line-height: 1.75;
-  text-align: center; }
-
-.ctc-form__application {
-  display: block;
-  color: #00785a;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none; }
-
-.ctc-form__application:hover {
-  text-decoration: underline; }
-
 .button {
   display: inline-block;
+  margin-top: 1rem;
   padding: 1.125rem 2rem;
   color: #ffffff;
   font-size: 0.75rem;

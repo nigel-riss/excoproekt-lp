@@ -4,10 +4,27 @@
     z-index: 2;
 
     // box model
+    margin: 0 auto;
+    max-width: 400px;
     padding: 2rem 1.5rem;
+
+    // typography
+    text-align: center;
 
     // visual
     background-color: $white;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba($dark, 0.5);
+
+    @include atDesktopS {
+        // box model
+        margin-top: 2rem;
+        max-width: inherit;
+        padding: 3rem 2rem;
+
+        // visual
+        background-color: rgba($white, 0.75);
+    }
 }
 
 .ctc-form__input {
@@ -20,6 +37,7 @@
     // border
     border: none;
     border-bottom: 1px solid $dark;
+    background-color: transparent;
 }
 
 .ctc-form__input:focus {
@@ -35,59 +53,7 @@
     width: 100%;
 
     // border
+    background-color: transparent;
     border: none;
     border-bottom: 1px solid $dark;
-}
-
-// to here
-
-.ctc-form__button {
-    // box model
-    display: block;
-    margin-bottom: 30px;
-    padding: 15px 0;
-    width: 100%;
-
-    // typography
-    color: $white;
-
-    // visual
-    background-color: $green;
-    cursor: pointer;
-    
-    // border
-    border: none;
-    border-radius: 10px;
-}
-
-.ctc-form__button:hover {
-    // visual
-    opacity: 0.75;
-}
-
-p.ctc-form__note {
-    // box model
-    margin: 0;
-    margin-bottom: 25px;
-
-    // typography
-    font-size: 0.75rem;
-    line-height: 1.75;
-    text-align: center;
-}
-
-.ctc-form__application {
-    // box model
-    display: block;
-
-    // typography
-    color: $green;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-}
-
-.ctc-form__application:hover {
-    // typography
-    text-decoration: underline;
 }

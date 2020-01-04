@@ -50,6 +50,14 @@
         background-size: cover;
         background-position: center left;
     }
+
+    .section__title::after {
+        @include atDesktopS {
+            // positioning
+            left: auto;
+            right: 0;
+        }
+    }
 }
 
 .section--docs {
@@ -86,6 +94,14 @@
         background-size: cover;
         background-position: center left;
     }
+
+    .section__title::after {
+        @include atDesktopS {
+            // positioning
+            left: auto;
+            right: 0;
+        }
+    }
 }
 
 .section--experts {
@@ -103,22 +119,6 @@
 
     // box model
     margin-bottom: 5rem;
-
-    // @include atTablet {
-    //     // box model
-    //     flex-basis: 50%;
-    //     padding-right: 40px;
-    // }
-
-    // @include atDesktopS {
-    //     // box model
-    //     flex-basis: 50%;
-    // }
-
-    // @include atDesktopM {
-    //     // box model
-    //     padding-right: 120px;
-    // }
 }
 
 .section__title {
@@ -136,13 +136,16 @@
     line-height: 1.5;
 
     @include atTablet {
+        // box model
+        padding-right: 40%;
+
         // typography
         font-size: 2rem;
     }
 
     @include atDesktopS {
-        // typography
-        // font-size: 2.25rem;
+        // box model
+        padding-right: 0;
     }
 }
 
@@ -153,7 +156,6 @@
     position: absolute;
     bottom: -2rem;
     left: 0;
-    // transform: translateX(-50%);
 
     // box model
     height: 1px;
@@ -165,14 +167,17 @@
 
 .section__cert {
     // box model
-    padding-top: 1rem;
+    margin-top: 2rem;
+    padding: 0.25rem;
+    padding-top: 0.5rem;
 
     // typography
     font-size: 0;
 
     // visual
     background-color: $white;
-    box-shadow: 0 0 2px rgba($dark, 0.5);
+    border-radius: 4px;
+    box-shadow: 0 0 12px rgba($dark, 0.5);
 
     @include atDesktopS {
         // positioning

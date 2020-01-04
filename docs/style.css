@@ -167,6 +167,12 @@ body {
 *::after {
   box-sizing: inherit; }
 
+@media (min-width: 1200px) {
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 1rem rgba(73, 73, 73, 0.75); } }
+
 hr {
   border-top: 1px solid rgba(0, 120, 90, 0.25); }
 

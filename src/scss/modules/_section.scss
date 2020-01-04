@@ -2,36 +2,90 @@
     // box model
     padding: 3rem 1.5rem;
 
-    // @include atTablet {
-    //     // box model
-    //     padding: 80px 40px;
-    // }
+    @include atTablet {
+        // box model
+        padding: 3rem 2rem;
+    }
 
-    // @include atDesktopS {
-    //     // box model
-    //     display: flex;
-    //     align-items: center;
-    //     min-height: 500px;
-    //     padding: 80px 50px;
-    // }
+    @include atDesktopS {
+        // box model
+        padding: 4rem 3rem;
+    }
+
+    @include atDesktopM {
+        // box model
+        padding: 7rem 5rem;
+    }
 }
 
 .section--cert {
+    @include atDesktopS {
+        // positioning
+        position: relative;
 
+        // box model
+        padding-right: 50%;
+        padding-right: calc(50% + 6rem);
+
+        // visual
+        background-image: url('./img/bgs/cert.jpg');
+        background-size: cover;
+        background-position: center right;
+    }
 }
 
 .section--free-cons {
     // visual
     background-color: $grey;
+
+    @include atDesktopS {
+        // box model
+        padding-left: 50%;
+
+        // typography
+        text-align: right;
+
+        // visual
+        background-image: url('./img/bgs/cons.jpg');
+        background-size: cover;
+        background-position: center left;
+    }
 }
 
 .section--docs {
+    @include atDesktopS {
+        // positioning
+        position: relative;
 
+        // box model
+        padding-right: 50%;
+        padding-right: calc(50% + 6rem);
+
+        // visual
+        background-image: url('./img/bgs/docs.jpg');
+        // background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
 }
 
 .section--request {
     // visual
     background-color: $grey;
+
+    @include atDesktopS {
+        // box model
+        padding-left: 50%;
+
+        // typography
+        text-align: right;
+
+        // visual
+        background-image: url('./img/bgs/request.jpg');
+        background-size: cover;
+        background-position: center left;
+    }
 }
 
 .section--experts {
@@ -58,8 +112,7 @@
 
     // @include atDesktopS {
     //     // box model
-    //     padding-right: 80px;
-    //     padding-bottom: 200px;
+    //     flex-basis: 50%;
     // }
 
     // @include atDesktopM {
@@ -82,15 +135,15 @@
     font-weight: 400;
     line-height: 1.5;
 
-    // @include atTablet {
-    //     // typography
-    //     font-size: 2rem;
-    // }
+    @include atTablet {
+        // typography
+        font-size: 2rem;
+    }
 
-    // @include atDesktopS {
-    //     // typography
-    //     font-size: 2.25rem;
-    // }
+    @include atDesktopS {
+        // typography
+        // font-size: 2.25rem;
+    }
 }
 
 .section__title::after {
@@ -108,6 +161,37 @@
 
     // visual
     background-color: $dark;
+}
+
+.section__cert {
+    // box model
+    padding-top: 1rem;
+
+    // typography
+    font-size: 0;
+
+    // visual
+    background-color: $white;
+    box-shadow: 0 0 2px rgba($dark, 0.5);
+
+    @include atDesktopS {
+        // positioning
+        position: absolute;
+        top: 50%;
+        right: 3rem;
+        transform: translateY(-50%);
+
+        // box model
+        width: 50%;
+    }
+
+    @include atDesktopM {
+        // positioning
+        right: 5rem;
+
+        // box model
+        width: 45%;
+    }
 }
 
 .section__cert img {

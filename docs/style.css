@@ -222,6 +222,9 @@ hr {
   order: 1;
   padding: 1rem 1.5rem;
   background-color: rgba(245, 245, 245, 0.5); }
+  @media (min-width: 700px) {
+    .header__contacts {
+      padding: 1rem 2rem; } }
   @media (min-width: 1000px) {
     .header__contacts {
       padding: 1rem 3rem;
@@ -251,6 +254,9 @@ hr {
   order: 0;
   padding: 1rem 1.5rem;
   background-color: #494949; }
+  @media (min-width: 700px) {
+    .header__nav {
+      padding: 1rem 2rem; } }
   @media (min-width: 1000px) {
     .header__nav {
       padding: 1rem 3rem; } }
@@ -594,12 +600,54 @@ a.main-nav__book {
 
 .section {
   padding: 3rem 1.5rem; }
+  @media (min-width: 700px) {
+    .section {
+      padding: 3rem 2rem; } }
+  @media (min-width: 1000px) {
+    .section {
+      padding: 4rem 3rem; } }
+  @media (min-width: 1200px) {
+    .section {
+      padding: 7rem 5rem; } }
+
+@media (min-width: 1000px) {
+  .section--cert {
+    position: relative;
+    padding-right: 50%;
+    padding-right: calc(50% + 6rem);
+    background-image: url("./img/bgs/cert.jpg");
+    background-size: cover;
+    background-position: center right; } }
 
 .section--free-cons {
   background-color: #eeeeee; }
+  @media (min-width: 1000px) {
+    .section--free-cons {
+      padding-left: 50%;
+      text-align: right;
+      background-image: url("./img/bgs/cons.jpg");
+      background-size: cover;
+      background-position: center left; } }
+
+@media (min-width: 1000px) {
+  .section--docs {
+    position: relative;
+    padding-right: 50%;
+    padding-right: calc(50% + 6rem);
+    background-image: url("./img/bgs/docs.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top right; } }
 
 .section--request {
   background-color: #eeeeee; }
+  @media (min-width: 1000px) {
+    .section--request {
+      padding-left: 50%;
+      text-align: right;
+      background-image: url("./img/bgs/request.jpg");
+      background-size: cover;
+      background-position: center left; } }
 
 .section--contacts {
   background-color: #eeeeee; }
@@ -616,6 +664,9 @@ a.main-nav__book {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5; }
+  @media (min-width: 700px) {
+    .section__title {
+      font-size: 2rem; } }
 
 .section__title::after {
   content: "";
@@ -625,6 +676,23 @@ a.main-nav__book {
   height: 1px;
   width: 10rem;
   background-color: #494949; }
+
+.section__cert {
+  padding-top: 1rem;
+  font-size: 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 2px rgba(73, 73, 73, 0.5); }
+  @media (min-width: 1000px) {
+    .section__cert {
+      position: absolute;
+      top: 50%;
+      right: 3rem;
+      transform: translateY(-50%);
+      width: 50%; } }
+  @media (min-width: 1200px) {
+    .section__cert {
+      right: 5rem;
+      width: 45%; } }
 
 .section__cert img {
   width: 100%; }

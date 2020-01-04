@@ -28,6 +28,11 @@
     // visual
     background-color: rgba($light, 0.5);
 
+    @include atTablet {
+        // box model
+        padding: 1rem 2rem;
+    }
+
     @include atDesktopS {
         // box model
         padding: 1rem 3rem;
@@ -76,6 +81,11 @@
 
     // visual
     background-color: $dark;
+
+    @include atTablet {
+        // box model
+        padding: 1rem 2rem;
+    }
 
     @include atDesktopS {
         // box model

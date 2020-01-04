@@ -197,20 +197,10 @@
         text-align: right;
     }
 
-    // @include atDesktopS {
-    //     // box model
-    //     max-width: 500px;
-
-    //     // typography
-    //     font-size: 1.75rem;
-    //     line-height: 1.25;
-    // }
-
-    // @include atDesktopM {
-    //     // box model
-    //     font-size: 2rem;
-    //     max-width: 520px;
-    // }
+    @include atDesktopM {
+        // typography
+        font-size: 2.5rem;
+    }
 }
 
 .header__title::after {

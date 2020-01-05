@@ -860,6 +860,18 @@ a.main-nav__book {
       display: flex;
       justify-content: space-around;
       align-items: flex-end; } }
+  @media (min-width: 1000px) {
+    .footer {
+      padding: 3rem;
+      justify-content: space-between;
+      align-items: stretch; } }
+  @media (min-width: 1200px) {
+    .footer {
+      padding: 3rem 5rem; } }
+
+@media (min-width: 1000px) {
+  .footer__top {
+    text-align: left; } }
 
 .footer__logo {
   display: inline-block;
@@ -879,6 +891,12 @@ a.main-nav__book {
   @media (min-width: 700px) {
     .footer__legals {
       margin-bottom: 1rem; } }
+
+@media (min-width: 1000px) {
+  .footer__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; } }
 
 .footer__phones {
   margin-bottom: 3rem; }

@@ -29,8 +29,9 @@
 
         // visual
         background-image: url('./img/bgs/cert.jpg');
-        background-size: cover;
-        background-position: center right;
+        // background-size: cover;
+        background-position: top right;
+        background-repeat: no-repeat;
     }
 }
 
@@ -211,9 +212,10 @@
     @include atDesktopS {
         // positioning
         position: absolute;
-        top: 50%;
         right: 3rem;
-        transform: translateY(-50%);
+        // top: 50%;
+        // transform: translateY(-50%);
+        bottom: 8rem;
 
         // box model
         width: 50%;

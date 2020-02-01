@@ -616,8 +616,8 @@ a.main-nav__book {
     padding-right: 50%;
     padding-right: calc(50% + 6rem);
     background-image: url("./img/bgs/cert.jpg");
-    background-size: cover;
-    background-position: center right; } }
+    background-position: top right;
+    background-repeat: no-repeat; } }
 
 .section--free-cons {
   background-color: #eeeeee; }
@@ -720,9 +720,8 @@ a.main-nav__book {
   @media (min-width: 1000px) {
     .section__cert {
       position: absolute;
-      top: 50%;
       right: 3rem;
-      transform: translateY(-50%);
+      bottom: 8rem;
       width: 50%; } }
   @media (min-width: 1200px) {
     .section__cert {

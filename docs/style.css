@@ -678,6 +678,10 @@ a.main-nav__book {
 
 .section--contacts {
   background-color: #eeeeee; }
+  @media (min-width: 1000px) {
+    .section--contacts .section__content {
+      display: flex;
+      align-items: stretch; } }
 
 .section__header {
   position: relative;
@@ -730,6 +734,26 @@ a.main-nav__book {
 
 .section__cert img {
   width: 100%; }
+
+.section__map {
+  display: none; }
+  @media (min-width: 1000px) {
+    .section__map {
+      display: block;
+      width: 100%;
+      order: 1; } }
+
+.section__contacts {
+  order: 0; }
+  @media (min-width: 1000px) {
+    .section__contacts {
+      margin-right: 3rem;
+      flex-grow: 1; } }
+
+.map {
+  height: 100%;
+  font-size: 0;
+  box-shadow: 0 0 1rem rgba(0, 43, 32, 0.25); }
 
 .title-3 {
   margin: 1.5rem 0;

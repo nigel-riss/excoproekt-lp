@@ -138,6 +138,13 @@
 .section--contacts {
     // visual
     background-color: $grey;
+
+    .section__content {
+        @include atDesktopS {
+            display: flex;
+            align-items: stretch;
+        }
+    }
 }
 
 .section__header {
@@ -233,4 +240,37 @@
 .section__cert img {
     // box model
     width: 100%;
+}
+
+.section__map {
+    // box model
+    display: none;
+
+    @include atDesktopS {
+        // box model
+        display: block;
+        width: 100%;
+        order: 1;
+    }
+}
+
+.section__contacts {
+    // box model
+    order: 0;
+
+    @include atDesktopS {
+        margin-right: 3rem;
+        flex-grow: 1;
+    }
+}
+
+.map {
+    // box model
+    height: 100%;
+
+    // typography
+    font-size: 0;
+
+    // visual
+    box-shadow: 0 0 1rem rgba($black, 0.25);
 }

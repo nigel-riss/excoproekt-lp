@@ -2,8 +2,8 @@
     /*
         Template Name: Order Page
     */
-    $SITE_KEY = "6LezM7kUAAAAAAFRosDIK_r1rsQ1Uq4Exqqf2gcH";
-    $SECRET_KEY = "6LezM7kUAAAAAHAsY5RkCaon6Z6MD8fo9c08G56v";
+    $SITE_KEY = "6LePBdUUAAAAANPIwscnmQl9oJFDZ49bJB7OtJkX";
+    $SECRET_KEY = "6LePBdUUAAAAABiUxSjlxnpZ8Cw2A7wpqf91MFQD";
     // Getting post data
     $c_name         = $_POST["contact_name"];
     $c_phone        = $_POST["contact_phone"];
@@ -11,7 +11,7 @@
     $g_recaptcha    = $_POST["g-recaptcha-response"];
     // Checking if not a robot
     function getCaptcha($secretToken) {
-        $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . "6LezM7kUAAAAAHAsY5RkCaon6Z6MD8fo9c08G56v" . "&response=" . $secretToken);
+        $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . "6LePBdUUAAAAABiUxSjlxnpZ8Cw2A7wpqf91MFQD" . "&response=" . $secretToken);
         $return = json_decode($response);
         // print_r($return);
         return ($return->success == true && $return->score > 0.5);

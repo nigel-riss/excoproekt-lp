@@ -16,6 +16,20 @@
     <!-- Yandex Maps -->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=c74fa3df-581b-427a-9ae6-f565f4548493&lang=ru_RU" type="text/javascript"></script>
 
+    <!-- reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LePBdUUAAAAANPIwscnmQl9oJFDZ49bJB7OtJkX"></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LePBdUUAAAAANPIwscnmQl9oJFDZ49bJB7OtJkX', {action: 'homepage'}).then(function(token) {
+                console.log(token);
+                var captchaInputs = document.querySelectorAll('[name="g-recaptcha-response"]');
+                for (var i = 0; i < captchaInputs.length; i++) {
+                    captchaInputs[i].value = token;
+                }
+                // document.getElementById('g-recaptcha-response').value = token;
+            });
+        });
+    </script>
     <?php wp_head(); ?>
 
     <title>ЭКСКО — Негосударственная экспертиза проекктной документации</title>
@@ -106,9 +120,12 @@
             </header>
             <div class="section__content">
                 <h3 class="title-3">заполните форму и&nbsp;мы перезвоним вам</h3>
-                <form class="ctc-form" action><input class="ctc-form__input" type="text" placeholder="Ваше имя:*"
-                        size="1"><input class="ctc-form__input" type="text" placeholder="Ваш контактный телефон:*"
-                        size="1"><input class="button" type="submit" value="Заказать консультацию"></form>
+                <form class="ctc-form" action="<?php echo esc_url(home_url('/')); ?>order/" method="post">
+                    <input class="ctc-form__input" type="text" name="contact_name" placeholder="Ваше имя:*" size="1">
+                    <input class="ctc-form__input" type="text" name="contact_phone" placeholder="Ваш контактный телефон:*" size="1">
+                    <input class="ctc-form__input" type="text" name="g-recaptcha-response" id="g-recaptcha-response" size="1"/>
+                    <input class="button" type="submit" value="Заказать консультацию">
+                </form>
             </div>
         </section>
         <section class="section section--docs">
@@ -136,11 +153,14 @@
             </header>
             <div class="section__content">
                 <h3 class="title-3">оставьте заявку и&nbsp;мы свяжемся c&nbsp;вами</h3>
-                <form class="ctc-form" action><input class="ctc-form__input" type="text" placeholder="Ваше имя:*"
-                        size="1"><input class="ctc-form__input" type="text" placeholder="Ваш E-mail:*" size="1"><input
-                        class="ctc-form__input" type="text" placeholder="Ваш контактный телефон:*" size="1"><textarea
-                        class="ctc-form__text" name cols="10" rows="6" placeholder="Сообщение"
-                        size="1"></textarea><input class="button" type="submit" value="Заказать консультацию"></form>
+                <form class="ctc-form" action="<?php echo esc_url(home_url('/')); ?>order/" method="post">
+                    <input class="ctc-form__input" type="text" name="contact_name" placeholder="Ваше имя:*" size="1">
+                    <input class="ctc-form__input" type="text" name="contact_email" placeholder="Ваш E-mail:*" size="1">
+                    <input class="ctc-form__input" type="text" name="contact_phone" placeholder="Ваш контактный телефон:*" size="1">
+                    <textarea class="ctc-form__text" name="contact_text" cols="10" rows="6" placeholder="Сообщение" size="1"></textarea>
+                    <input class="ctc-form__input" type="text" name="g-recaptcha-response" id="g-recaptcha-response-2" size="1"/>
+                    <input class="button" type="submit" value="Заказать консультацию">
+                </form>
             </div>
         </section>
         <section class="section section--experts">
@@ -253,9 +273,12 @@
                     </ul>
                 </nav>
             </div>
-            <div class="footer__bottom"><a class="button" href="#">Бесплатная консультация</a>
-                <p class="footer__phones"><a href="tel:+74012519111">+7 (4012) 519-111</a> <br><a
-                        href="tel:+74012771292">+7 (4012) 771-292</a></p>
+            <div class="footer__bottom">
+                <a class="button" href="#">Бесплатная консультация</a>
+                <p class="footer__phones">
+                    <a href="tel:+74012519111">+7 (4012) 519-111</a> <br>
+                    <a href="tel:+74012771292">+7 (4012) 771-292</a>
+                </p>
                 <p class="footer__legals">&copy; ЭКСКО 2018 — <?php echo Date('Y'); ?></p>
             </div>
         </footer>

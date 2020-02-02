@@ -1,11 +1,12 @@
 'use strict';
 
+const autoprefixer = require('gulp-autoprefixer');
+const embedSVG = require('gulp-embed-svg');
 const gulp = require('gulp');
 const pug = require('gulp-pug');
-const embedSVG = require('gulp-embed-svg');
 const sass = require('gulp-sass');
-const webpack = require('webpack-stream');
 const server = require('browser-sync').create();
+const webpack = require('webpack-stream');
 
 
 // Paths
@@ -17,6 +18,8 @@ const dirs = {
   scssAll: './src/scss/**/*.scss',
   js: './src/js/**/*.js',
   docs: './docs',
+  php: './src/php/*.php',
+  wp: 'G:/xampp2/htdocs/excoproekt/wp-content/themes/exco',
 };
 
 
@@ -28,8 +31,8 @@ const webpackConfig = {
   output: {
     filename: '[name].js',
   },
-  // mode: 'production',
-  mode: 'development',
+  mode: 'production',
+  // mode: 'development',
   module: {
     rules: [
       {
@@ -104,8 +107,18 @@ const compileStyles = (cb) => {
     .on('error', (error) => {
       console.log("\x1b[31m", error.message, "\x1b[0m");
     })
+    .pipe(autoprefixer({
+      overrideBrowserslist: [
+        "last 2 versions",
+        "> 0.5%",
+        "maintained node versions",
+        "not dead"
+      ]
+      // cascade: false,
+    }))
     .pipe(gulp.dest(dirs.docs))
-    .pipe(server.reload({stream: true}));
+    .pipe(server.reload({stream: true}))
+    .pipe(gulp.dest(dirs.wp));
 
   cb();
 };
@@ -117,15 +130,27 @@ const compileStyles = (cb) => {
  */
 const compileScripts = (cb) => {
   gulp.src(dirs.js)
-    // .pipe(plumber)
     .pipe(webpack(webpackConfig))
     .on('error', (error) => {
       console.log("\x1b[31m", error.message, "\x1b[0m");
     })
-    .pipe(gulp.dest(dirs.docs));
+    .pipe(gulp.dest(dirs.docs))
+    .pipe(gulp.dest(dirs.wp));
 
   cb();
 };
+
+
+/**
+ * Copies PHP files to wp-themes directory
+ * @param {function} cb callback
+ */
+const copyPHP = (cb) => {
+  gulp.src(dirs.php)
+    .pipe(gulp.dest(dirs.wp));
+
+  cb();
+}
 
 
 /**
@@ -137,6 +162,7 @@ const watch = () => {
   gulp.watch(dirs.svg, gulp.series(renderPug, reloadServer));
   gulp.watch(dirs.scssAll, gulp.series(compileStyles));
   gulp.watch(dirs.js, gulp.series(compileScripts, reloadServer));
+  gulp.watch(dirs.php, gulp.series(copyPHP));
 };
 
 
@@ -145,6 +171,7 @@ exports.renderPug = renderPug;
 exports.compileStyles = compileStyles;
 exports.compileScripts = compileScripts;
 exports.startServer = startServer;
+exports.copyPHP = copyPHP;
 
 // Watch task
 exports.watch = watch;

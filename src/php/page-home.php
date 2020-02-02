@@ -256,7 +256,7 @@
             <div class="footer__bottom"><a class="button" href="#">Бесплатная консультация</a>
                 <p class="footer__phones"><a href="tel:+74012519111">+7 (4012) 519-111</a> <br><a
                         href="tel:+74012771292">+7 (4012) 771-292</a></p>
-                <p class="footer__legals">&copy; ЭКСКО 2018 — 2020</p>
+                <p class="footer__legals">&copy; ЭКСКО 2018 — <?php echo Date('Y'); ?></p>
             </div>
         </footer>
     </div>

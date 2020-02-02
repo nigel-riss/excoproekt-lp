@@ -6,6 +6,7 @@
     $SECRET_KEY = "6LePBdUUAAAAABiUxSjlxnpZ8Cw2A7wpqf91MFQD";
     // Getting post data
     $c_name         = $_POST["contact_name"];
+    $c_email        = $_POST["contact_email"];
     $c_phone        = $_POST["contact_phone"];
     $c_message      = $_POST["contact_message"];
     $g_recaptcha    = $_POST["g-recaptcha-response"];
@@ -20,13 +21,16 @@
         $to = 'exco@list.ru';
         $bcc = 'mr.kurenkov@gmail.com';
         
-        $subject = 'Обращение с сайта excopro.ru';
+        $subject = 'Обращение с сайта excoproekt.ru';
         $headers = array('Content-Type: text/html; charset=UTF-8');
-        $content = "Имя: " . htmlspecialchars($c_name) . "<br>Телефон: " .htmlspecialchars($c_phone) . "<br>Сообщение: " . htmlspecialchars($c_message);
-        
-        $success = wp_mail( $to, $subject, $content, $headers );
-        wp_mail( $bcc, $subject, $content, $headers );
-        // $success = wp_mail( $bcc, $subject, $content, $headers );
+        $content = "Имя: " . htmlspecialchars($c_name) 
+                    . "<br>Email: " .htmlspecialchars($c_email) 
+                    . "<br>Телефон: " .htmlspecialchars($c_phone) 
+                    . "<br>Сообщение: " . htmlspecialchars($c_message);
+
+        // $success = wp_mail( $to, $subject, $content, $headers );
+        // wp_mail( $bcc, $subject, $content, $headers );
+        $success = wp_mail( $bcc, $subject, $content, $headers );
         // $success = 0;
     }
 ?>
@@ -75,7 +79,7 @@
                 <div>
 
                 <div class="feedback__button">
-                    <a class="ghost-button" href="" onclick="window.history.go(-1); return false;">Вернуться на сайт</a>
+                    <a class="ghost-button" href="<?php echo esc_url(home_url('/')); ?>">Вернуться на сайт</a>
                 </div>
             </div>
         <?php } ?>

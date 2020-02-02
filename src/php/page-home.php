@@ -121,9 +121,9 @@
             <div class="section__content">
                 <h3 class="title-3">заполните форму и&nbsp;мы перезвоним вам</h3>
                 <form class="ctc-form" action="<?php echo esc_url(home_url('/')); ?>order/" method="post">
-                    <input class="ctc-form__input" type="text" name="contact_name" placeholder="Ваше имя:*" size="1">
-                    <input class="ctc-form__input" type="text" name="contact_phone" placeholder="Ваш контактный телефон:*" size="1">
-                    <input class="ctc-form__input" type="text" name="g-recaptcha-response" id="g-recaptcha-response" size="1"/>
+                    <input class="ctc-form__input" type="text" name="contact_name" placeholder="Ваше имя:*" size="1" required\>
+                    <input class="ctc-form__input" type="text" name="contact_phone" placeholder="Ваш контактный телефон:*" size="1" required\>
+                    <input class="ctc-form__input" type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" size="1"/>
                     <input class="button" type="submit" value="Заказать консультацию">
                 </form>
             </div>
@@ -154,11 +154,11 @@
             <div class="section__content">
                 <h3 class="title-3">оставьте заявку и&nbsp;мы свяжемся c&nbsp;вами</h3>
                 <form class="ctc-form" action="<?php echo esc_url(home_url('/')); ?>order/" method="post">
-                    <input class="ctc-form__input" type="text" name="contact_name" placeholder="Ваше имя:*" size="1">
-                    <input class="ctc-form__input" type="text" name="contact_email" placeholder="Ваш E-mail:*" size="1">
-                    <input class="ctc-form__input" type="text" name="contact_phone" placeholder="Ваш контактный телефон:*" size="1">
+                    <input class="ctc-form__input" type="text" name="contact_name" placeholder="Ваше имя:*" size="1" required\>
+                    <input class="ctc-form__input" type="text" name="contact_email" placeholder="Ваш E-mail:*" size="1" required\>
+                    <input class="ctc-form__input" type="text" name="contact_phone" placeholder="Ваш контактный телефон:*" size="1" required\>
                     <textarea class="ctc-form__text" name="contact_text" cols="10" rows="6" placeholder="Сообщение" size="1"></textarea>
-                    <input class="ctc-form__input" type="text" name="g-recaptcha-response" id="g-recaptcha-response-2" size="1"/>
+                    <input class="ctc-form__input" type="hidden" name="g-recaptcha-response" id="g-recaptcha-response-2" size="1"/>
                     <input class="button" type="submit" value="Заказать консультацию">
                 </form>
             </div>

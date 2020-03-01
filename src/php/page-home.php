@@ -48,7 +48,7 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header id="header" class="header">
             <div class="header__contacts">
                 <div class="header__contacts-column">
                     <a class="header-contact" href="tel:+74012519111">+7 (4012) 519-111</a>
@@ -73,12 +73,24 @@
                     </svg>
                 </div>
                 <ul class="main-nav">
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Аккредитация</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Заявителю</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Заявка на экспертизу</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Эксперты</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#header">Главная</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#cert">Аккредитация</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#docs">Заявителю</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#section-request">Заявка на экспертизу</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#team">Эксперты</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#contacts">Контакты</a>
+                    </li>
                     <li class="main-nav__item"><a class="main-nav__book" href="#section-request">Консультация бесплатно</a></li>
                 </ul>
                 <div class="header__menu-button">
@@ -97,7 +109,7 @@
                 <a class="button button--header" href="#section-request">Заказать экспертизу</a>
             </div>
         </header>
-        <section class="section section--cert">
+        <section id="cert" class="section section--cert">
             <header class="section__header">
                 <h2 class="section__title">Проводим экспертизу на&nbsp;законных основаниях!</h2>
             </header>
@@ -139,7 +151,7 @@
                 </form>
             </div>
         </section>
-        <section class="section section--docs">
+        <section id="docs" class="section section--docs">
             <header class="section__header">
                 <h2 class="section__title">Рассмотрим ваши документы уже сегодня</h2>
             </header>
@@ -174,7 +186,7 @@
                 </form>
             </div>
         </section>
-        <section class="section section--experts">
+        <section id="team" class="section section--experts">
             <header class="section__header">
                 <h2 class="section__title">С&nbsp;вами будут работать только лучшие эксперты</h2>
             </header>
@@ -223,7 +235,7 @@
                 </article>
             </div>
         </section>
-        <section class="section section--contacts">
+        <section id="contacts" class="section section--contacts">
             <header class="section__header">
                 <h2 class="section__title">Наши контакты</h2>
             </header>

@@ -30,6 +30,17 @@
             });
         });
     </script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/apple-touch-icon.png?v=rMq5jkjkXL">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/favicon-32x32.png?v=rMq5jkjkXL">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/favicon-16x16.png?v=rMq5jkjkXL">
+    <link rel="manifest" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/site.webmanifest?v=rMq5jkjkXL">
+    <link rel="mask-icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/safari-pinned-tab.svg?v=rMq5jkjkXL" color="#00785a">
+    <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon/favicon.ico?v=rMq5jkjkXL">
+    <meta name="msapplication-TileColor" content="#00785a">
+    <meta name="theme-color" content="#00785a">
+
     <?php wp_head(); ?>
 
     <title>ЭКСКО — Негосударственная экспертиза проекктной документации</title>

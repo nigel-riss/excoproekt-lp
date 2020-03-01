@@ -28,9 +28,9 @@
                     . "<br>Телефон: " .htmlspecialchars($c_phone) 
                     . "<br>Сообщение: " . htmlspecialchars($c_message);
 
+        wp_mail( $bcc, $subject, $content, $headers );
+        $success = wp_mail( $to, $subject, $content, $headers );
         // $success = wp_mail( $to, $subject, $content, $headers );
-        // wp_mail( $bcc, $subject, $content, $headers );
-        $success = wp_mail( $bcc, $subject, $content, $headers );
         // $success = 0;
     }
 ?>

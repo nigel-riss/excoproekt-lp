@@ -68,7 +68,7 @@
                     <li class="main-nav__item"><a class="main-nav__link" href="#">Заявка на экспертизу</a></li>
                     <li class="main-nav__item"><a class="main-nav__link" href="#">Эксперты</a></li>
                     <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
-                    <li class="main-nav__item"><a class="main-nav__book" href="#">Консультация бесплатно</a></li>
+                    <li class="main-nav__item"><a class="main-nav__book" href="#section-request">Консультация бесплатно</a></li>
                 </ul>
                 <div class="header__menu-button">
                     <button class="menu-button">
@@ -83,7 +83,7 @@
                     <span class="header__title-bottom">проектной документации</span>
                 </h1>
                 <p class="header__text">Закажите у&nbsp;нас экспертизу вашей проектной документации и&nbsp;получите объективные результаты по&nbsp;разумным ценам и&nbsp;в&nbsp;сжатые сроки</p>
-                <a class="button button--header" href="#">Заказать экспертизу</a>
+                <a class="button button--header" href="#section-request">Заказать экспертизу</a>
             </div>
         </header>
         <section class="section section--cert">
@@ -147,7 +147,7 @@
                         href="./docs/regulations.pdf">регламентом организации</a>, утвержденным 27.01.2018г.</p>
             </div>
         </section>
-        <section class="section section--request">
+        <section id="section-request" class="section section--request">
             <header class="section__header">
                 <h2 class="section__title">Заказать проведение экспертизы очень просто</h2>
             </header>
